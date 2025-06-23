@@ -1,0 +1,2 @@
+[20:27:29] [plugins/mysql] error #1054 while executing query "SELECT password, salt ": Unknown column 'password' in 'field list' (C:\Dev\OurServerSAMP\ServerClean\gamemodes\project.pwn:111)
+[20:29:06] [plugins/mysql] error #1054 while executing query "SELECT password, salt ": Unknown column 'password' in 'field list' (C:\Dev\OurServerSAMP\ServerClean\gamemodes\project.pwn:111)

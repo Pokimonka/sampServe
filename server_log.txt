@@ -1468,3 +1468,1805 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [10:44:36] [connection] incoming connection: 127.0.0.1:64828 id: 0
 [10:44:36] [join] Sakata_Onaretev has joined the server (0:127.0.0.1)
 [10:44:51] [part] Sakata_Onaretev has left the server (0:2)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[11:05:32] filterscripts = ""  (string)
+[11:05:32] 
+[11:05:32] Server Plugins
+[11:05:32] --------------
+[11:05:32]  Loading plugin: mysql
+[11:05:32]  >> plugin.mysql: R41-4 successfully loaded.
+[11:05:32]   Loaded.
+[11:05:32]  Loading plugin: crashdetect
+[11:05:32]   CrashDetect v4.18.1 is OK.
+[11:05:32]   Loaded.
+[11:05:32]  Loading plugin: streamer
+[11:05:32] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[11:05:32]   Loaded.
+[11:05:32]  Loading plugin: sscanf
+[11:05:32] 
+
+[11:05:32]  ===============================
+
+[11:05:32]       sscanf plugin loaded.     
+
+[11:05:32]          Version:  2.8.1        
+
+[11:05:32]    (c) 2012 Alex "Y_Less" Cole  
+
+[11:05:32]  ===============================
+
+[11:05:32]   Loaded.
+[11:05:32]  Loading plugin: pawncmd
+[11:05:32] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[11:05:32]   Loaded.
+[11:05:32]  Loading plugin: pawnregex
+[11:05:32] Pawn.Regex plugin v1.1 by urShadow loaded
+[11:05:32]   Loaded.
+[11:05:32]  Loaded 6 plugins.
+
+[11:05:32] 
+[11:05:32] Filterscripts
+[11:05:32] ---------------
+[11:05:32]   Loaded 0 filterscripts.
+
+[11:05:40] Подключение к MySql установленно
+[11:05:40] 
+----------------------------------
+[11:05:40] --------NEW PROJECT STARTED---------
+[11:05:40] ----------------------------------
+
+[11:05:40] Number of vehicle models: 0
+[11:06:14] [connection] incoming connection: 127.0.0.1:54759 id: 0
+[11:06:14] [join] Sakata_Onaretev has joined the server (0:127.0.0.1)
+[11:08:05] [part] Sakata_Onaretev has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[00:40:03] filterscripts = ""  (string)
+[00:40:03] 
+[00:40:03] Server Plugins
+[00:40:03] --------------
+[00:40:03]  Loading plugin: mysql
+[00:40:03]  >> plugin.mysql: R41-4 successfully loaded.
+[00:40:03]   Loaded.
+[00:40:03]  Loading plugin: crashdetect
+[00:40:03]   CrashDetect v4.18.1 is OK.
+[00:40:03]   Loaded.
+[00:40:03]  Loading plugin: streamer
+[00:40:03] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[00:40:03]   Loaded.
+[00:40:03]  Loading plugin: sscanf
+[00:40:03] 
+
+[00:40:03]  ===============================
+
+[00:40:03]       sscanf plugin loaded.     
+
+[00:40:03]          Version:  2.8.1        
+
+[00:40:03]    (c) 2012 Alex "Y_Less" Cole  
+
+[00:40:03]  ===============================
+
+[00:40:03]   Loaded.
+[00:40:03]  Loading plugin: pawncmd
+[00:40:03] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[00:40:03]   Loaded.
+[00:40:03]  Loading plugin: pawnregex
+[00:40:03] Pawn.Regex plugin v1.1 by urShadow loaded
+[00:40:03]   Loaded.
+[00:40:03]  Loaded 6 plugins.
+
+[00:40:03] 
+[00:40:03] Filterscripts
+[00:40:03] ---------------
+[00:40:03]   Loaded 0 filterscripts.
+
+[00:40:11] Подключение к MySql установленно
+[00:40:11] 
+----------------------------------
+[00:40:11] --------NEW PROJECT STARTED---------
+[00:40:11] ----------------------------------
+
+[00:40:11] Number of vehicle models: 0
+[00:40:50] [connection] incoming connection: 127.0.0.1:60221 id: 0
+[00:40:51] [join] Sakata_Onaretev has joined the server (0:127.0.0.1)
+[00:42:45] [Pawn.Regex] Plugin::n_regex_check: invalid str
+[00:42:47] [Pawn.Regex] Plugin::n_regex_check: invalid str
+[00:42:48] [Pawn.Regex] Plugin::n_regex_check: invalid str
+[00:42:48] [Pawn.Regex] Plugin::n_regex_check: invalid str
+[00:44:31] [part] Sakata_Onaretev has left the server (0:1)
+[00:45:33] [connection] incoming connection: 127.0.0.1:60025 id: 0
+[00:45:34] [join] Sakata_Onaretev has joined the server (0:127.0.0.1)
+[00:45:52] [part] Sakata_Onaretev has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:43:44] filterscripts = ""  (string)
+[01:43:44] 
+[01:43:44] Server Plugins
+[01:43:44] --------------
+[01:43:44]  Loading plugin: mysql
+[01:43:44]  >> plugin.mysql: R41-4 successfully loaded.
+[01:43:44]   Loaded.
+[01:43:44]  Loading plugin: crashdetect
+[01:43:44]   CrashDetect v4.18.1 is OK.
+[01:43:44]   Loaded.
+[01:43:44]  Loading plugin: streamer
+[01:43:44] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[01:43:44]   Loaded.
+[01:43:44]  Loading plugin: sscanf
+[01:43:44] 
+
+[01:43:44]  ===============================
+
+[01:43:44]       sscanf plugin loaded.     
+
+[01:43:44]          Version:  2.8.1        
+
+[01:43:44]    (c) 2012 Alex "Y_Less" Cole  
+
+[01:43:44]  ===============================
+
+[01:43:44]   Loaded.
+[01:43:44]  Loading plugin: pawncmd
+[01:43:44] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[01:43:44]   Loaded.
+[01:43:44]  Loading plugin: pawnregex
+[01:43:44] Pawn.Regex plugin v1.1 by urShadow loaded
+[01:43:44]   Loaded.
+[01:43:44]  Loaded 6 plugins.
+
+[01:43:44] 
+[01:43:44] Filterscripts
+[01:43:44] ---------------
+[01:43:44]   Loaded 0 filterscripts.
+
+[01:43:52] Подключение к MySql установленно
+[01:43:52] 
+----------------------------------
+[01:43:52] --------NEW PROJECT STARTED---------
+[01:43:52] ----------------------------------
+
+[01:43:52] Number of vehicle models: 0
+[01:44:23] [connection] incoming connection: 127.0.0.1:50113 id: 0
+[01:44:24] [join] Sakata_Onaretev has joined the server (0:127.0.0.1)
+[01:45:12] [part] Sakata_Onaretev has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:51:15] filterscripts = ""  (string)
+[01:51:15] 
+[01:51:15] Server Plugins
+[01:51:15] --------------
+[01:51:15]  Loading plugin: mysql
+[01:51:15]  >> plugin.mysql: R41-4 successfully loaded.
+[01:51:15]   Loaded.
+[01:51:15]  Loading plugin: crashdetect
+[01:51:15]   CrashDetect v4.18.1 is OK.
+[01:51:15]   Loaded.
+[01:51:15]  Loading plugin: streamer
+[01:51:15] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[01:51:15]   Loaded.
+[01:51:15]  Loading plugin: sscanf
+[01:51:15] 
+
+[01:51:15]  ===============================
+
+[01:51:15]       sscanf plugin loaded.     
+
+[01:51:15]          Version:  2.8.1        
+
+[01:51:15]    (c) 2012 Alex "Y_Less" Cole  
+
+[01:51:15]  ===============================
+
+[01:51:15]   Loaded.
+[01:51:15]  Loading plugin: pawncmd
+[01:51:15] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[01:51:15]   Loaded.
+[01:51:15]  Loading plugin: pawnregex
+[01:51:15] Pawn.Regex plugin v1.1 by urShadow loaded
+[01:51:15]   Loaded.
+[01:51:15]  Loaded 6 plugins.
+
+[01:51:15] 
+[01:51:15] Filterscripts
+[01:51:15] ---------------
+[01:51:15]   Loaded 0 filterscripts.
+
+[01:51:23] Подключение к MySql установленно
+[01:51:23] 
+----------------------------------
+[01:51:23] --------NEW PROJECT STARTED---------
+[01:51:23] ----------------------------------
+
+[01:51:23] Number of vehicle models: 0
+[01:51:41] [connection] incoming connection: 127.0.0.1:59377 id: 0
+[01:51:41] [join] Sakata_Onaretev has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[02:08:26] filterscripts = ""  (string)
+[02:08:26] 
+[02:08:26] Server Plugins
+[02:08:26] --------------
+[02:08:26]  Loading plugin: mysql
+[02:08:26]  >> plugin.mysql: R41-4 successfully loaded.
+[02:08:26]   Loaded.
+[02:08:26]  Loading plugin: crashdetect
+[02:08:26]   CrashDetect v4.18.1 is OK.
+[02:08:26]   Loaded.
+[02:08:26]  Loading plugin: streamer
+[02:08:26] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[02:08:26]   Loaded.
+[02:08:26]  Loading plugin: sscanf
+[02:08:26] 
+
+[02:08:26]  ===============================
+
+[02:08:26]       sscanf plugin loaded.     
+
+[02:08:26]          Version:  2.8.1        
+
+[02:08:26]    (c) 2012 Alex "Y_Less" Cole  
+
+[02:08:26]  ===============================
+
+[02:08:26]   Loaded.
+[02:08:26]  Loading plugin: pawncmd
+[02:08:26] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[02:08:26]   Loaded.
+[02:08:26]  Loading plugin: pawnregex
+[02:08:26] Pawn.Regex plugin v1.1 by urShadow loaded
+[02:08:26]   Loaded.
+[02:08:26]  Loaded 6 plugins.
+
+[02:08:26] 
+[02:08:26] Filterscripts
+[02:08:26] ---------------
+[02:08:26]   Loaded 0 filterscripts.
+
+[02:08:34] Подключение к MySql установленно
+[02:08:34] 
+----------------------------------
+[02:08:34] --------NEW PROJECT STARTED---------
+[02:08:34] ----------------------------------
+
+[02:08:34] Number of vehicle models: 0
+[02:08:34] [connection] incoming connection: 127.0.0.1:55382 id: 0
+[02:08:34] [join] Sakata_Onaretev has joined the server (0:127.0.0.1)
+[02:08:46] 6XE:9Jje
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[02:11:40] filterscripts = ""  (string)
+[02:11:40] 
+[02:11:40] Server Plugins
+[02:11:40] --------------
+[02:11:40]  Loading plugin: mysql
+[02:11:40]  >> plugin.mysql: R41-4 successfully loaded.
+[02:11:40]   Loaded.
+[02:11:40]  Loading plugin: crashdetect
+[02:11:40]   CrashDetect v4.18.1 is OK.
+[02:11:40]   Loaded.
+[02:11:40]  Loading plugin: streamer
+[02:11:40] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[02:11:40]   Loaded.
+[02:11:40]  Loading plugin: sscanf
+[02:11:40] 
+
+[02:11:40]  ===============================
+
+[02:11:40]       sscanf plugin loaded.     
+
+[02:11:40]          Version:  2.8.1        
+
+[02:11:40]    (c) 2012 Alex "Y_Less" Cole  
+
+[02:11:40]  ===============================
+
+[02:11:40]   Loaded.
+[02:11:40]  Loading plugin: pawncmd
+[02:11:40] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[02:11:40]   Loaded.
+[02:11:40]  Loading plugin: pawnregex
+[02:11:40] Pawn.Regex plugin v1.1 by urShadow loaded
+[02:11:40]   Loaded.
+[02:11:40]  Loaded 6 plugins.
+
+[02:11:40] 
+[02:11:40] Filterscripts
+[02:11:40] ---------------
+[02:11:40]   Loaded 0 filterscripts.
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[02:11:47] filterscripts = ""  (string)
+[02:11:47] 
+[02:11:47] Server Plugins
+[02:11:47] --------------
+[02:11:47]  Loading plugin: mysql
+[02:11:47]  >> plugin.mysql: R41-4 successfully loaded.
+[02:11:47]   Loaded.
+[02:11:47]  Loading plugin: crashdetect
+[02:11:47]   CrashDetect v4.18.1 is OK.
+[02:11:47]   Loaded.
+[02:11:47]  Loading plugin: streamer
+[02:11:47] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[02:11:47]   Loaded.
+[02:11:47]  Loading plugin: sscanf
+[02:11:47] 
+
+[02:11:47]  ===============================
+
+[02:11:47]       sscanf plugin loaded.     
+
+[02:11:47]          Version:  2.8.1        
+
+[02:11:47]    (c) 2012 Alex "Y_Less" Cole  
+
+[02:11:47]  ===============================
+
+[02:11:47]   Loaded.
+[02:11:47]  Loading plugin: pawncmd
+[02:11:47] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[02:11:47]   Loaded.
+[02:11:47]  Loading plugin: pawnregex
+[02:11:47] Pawn.Regex plugin v1.1 by urShadow loaded
+[02:11:47]   Loaded.
+[02:11:47]  Loaded 6 plugins.
+
+[02:11:47] 
+[02:11:47] Filterscripts
+[02:11:47] ---------------
+[02:11:47]   Loaded 0 filterscripts.
+
+[02:11:55] Подключение к MySql установленно
+[02:11:55] 
+----------------------------------
+[02:11:55] --------NEW PROJECT STARTED---------
+[02:11:55] ----------------------------------
+
+[02:11:55] Number of vehicle models: 0
+[02:11:55] [connection] incoming connection: 127.0.0.1:62562 id: 0
+[02:11:55] [join] Sakata_Onaretev has joined the server (0:127.0.0.1)
+[02:12:04] Qj[Az{Fj{}
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[03:02:04] filterscripts = ""  (string)
+[03:02:04] 
+[03:02:04] Server Plugins
+[03:02:04] --------------
+[03:02:04]  Loading plugin: mysql
+[03:02:04]  >> plugin.mysql: R41-4 successfully loaded.
+[03:02:04]   Loaded.
+[03:02:04]  Loading plugin: crashdetect
+[03:02:04]   CrashDetect v4.18.1 is OK.
+[03:02:04]   Loaded.
+[03:02:04]  Loading plugin: streamer
+[03:02:04] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[03:02:04]   Loaded.
+[03:02:04]  Loading plugin: sscanf
+[03:02:04] 
+
+[03:02:04]  ===============================
+
+[03:02:04]       sscanf plugin loaded.     
+
+[03:02:04]          Version:  2.8.1        
+
+[03:02:04]    (c) 2012 Alex "Y_Less" Cole  
+
+[03:02:04]  ===============================
+
+[03:02:04]   Loaded.
+[03:02:04]  Loading plugin: pawncmd
+[03:02:04] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[03:02:04]   Loaded.
+[03:02:04]  Loading plugin: pawnregex
+[03:02:04] Pawn.Regex plugin v1.1 by urShadow loaded
+[03:02:04]   Loaded.
+[03:02:04]  Loaded 6 plugins.
+
+[03:02:04] 
+[03:02:04] Filterscripts
+[03:02:04] ---------------
+[03:02:04]   Loaded 0 filterscripts.
+
+[03:02:12] Подключение к MySql установленно
+[03:02:12] 
+----------------------------------
+[03:02:12] --------NEW PROJECT STARTED---------
+[03:02:12] ----------------------------------
+
+[03:02:12] Number of vehicle models: 0
+[03:02:21] [connection] incoming connection: 127.0.0.1:61314 id: 0
+[03:02:21] [join] Sakata_Onaretev has joined the server (0:127.0.0.1)
+[03:02:28] @4c]lv{6?]
+[03:02:58] id
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[03:04:42] filterscripts = ""  (string)
+[03:04:42] 
+[03:04:42] Server Plugins
+[03:04:42] --------------
+[03:04:42]  Loading plugin: mysql
+[03:04:42]  >> plugin.mysql: R41-4 successfully loaded.
+[03:04:42]   Loaded.
+[03:04:42]  Loading plugin: crashdetect
+[03:04:42]   CrashDetect v4.18.1 is OK.
+[03:04:42]   Loaded.
+[03:04:42]  Loading plugin: streamer
+[03:04:42] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[03:04:42]   Loaded.
+[03:04:42]  Loading plugin: sscanf
+[03:04:42] 
+
+[03:04:42]  ===============================
+
+[03:04:42]       sscanf plugin loaded.     
+
+[03:04:42]          Version:  2.8.1        
+
+[03:04:42]    (c) 2012 Alex "Y_Less" Cole  
+
+[03:04:42]  ===============================
+
+[03:04:42]   Loaded.
+[03:04:42]  Loading plugin: pawncmd
+[03:04:42] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[03:04:42]   Loaded.
+[03:04:42]  Loading plugin: pawnregex
+[03:04:42] Pawn.Regex plugin v1.1 by urShadow loaded
+[03:04:42]   Loaded.
+[03:04:42]  Loaded 6 plugins.
+
+[03:04:42] 
+[03:04:42] Filterscripts
+[03:04:42] ---------------
+[03:04:42]   Loaded 0 filterscripts.
+
+[03:04:50] Подключение к MySql установленно
+[03:04:50] 
+----------------------------------
+[03:04:50] --------NEW PROJECT STARTED---------
+[03:04:50] ----------------------------------
+
+[03:04:50] Number of vehicle models: 0
+[03:04:59] [connection] incoming connection: 127.0.0.1:54684 id: 0
+[03:04:59] [join] Sakata_Onaretev has joined the server (0:127.0.0.1)
+[03:05:19] 29
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[03:35:47] filterscripts = ""  (string)
+[03:35:47] 
+[03:35:47] Server Plugins
+[03:35:47] --------------
+[03:35:47]  Loading plugin: mysql
+[03:35:47]  >> plugin.mysql: R41-4 successfully loaded.
+[03:35:47]   Loaded.
+[03:35:47]  Loading plugin: crashdetect
+[03:35:47]   CrashDetect v4.18.1 is OK.
+[03:35:47]   Loaded.
+[03:35:47]  Loading plugin: streamer
+[03:35:47] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[03:35:47]   Loaded.
+[03:35:47]  Loading plugin: sscanf
+[03:35:47] 
+
+[03:35:47]  ===============================
+
+[03:35:47]       sscanf plugin loaded.     
+
+[03:35:47]          Version:  2.8.1        
+
+[03:35:47]    (c) 2012 Alex "Y_Less" Cole  
+
+[03:35:47]  ===============================
+
+[03:35:47]   Loaded.
+[03:35:47]  Loading plugin: pawncmd
+[03:35:47] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[03:35:47]   Loaded.
+[03:35:47]  Loading plugin: pawnregex
+[03:35:47] Pawn.Regex plugin v1.1 by urShadow loaded
+[03:35:47]   Loaded.
+[03:35:47]  Loaded 6 plugins.
+
+[03:35:47] 
+[03:35:47] Filterscripts
+[03:35:47] ---------------
+[03:35:47]   Loaded 0 filterscripts.
+
+[03:35:55] Подключение к MySql установленно
+[03:35:55] 
+----------------------------------
+[03:35:55] --------NEW PROJECT STARTED---------
+[03:35:55] ----------------------------------
+
+[03:35:55] Number of vehicle models: 0
+[03:36:05] [connection] incoming connection: 127.0.0.1:60166 id: 0
+[03:36:05] [join] Sakata_Onaretev has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[03:45:40] filterscripts = ""  (string)
+[03:45:40] 
+[03:45:40] Server Plugins
+[03:45:40] --------------
+[03:45:40]  Loading plugin: mysql
+[03:45:40]  >> plugin.mysql: R41-4 successfully loaded.
+[03:45:40]   Loaded.
+[03:45:40]  Loading plugin: crashdetect
+[03:45:40]   CrashDetect v4.18.1 is OK.
+[03:45:40]   Loaded.
+[03:45:40]  Loading plugin: streamer
+[03:45:40] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[03:45:40]   Loaded.
+[03:45:40]  Loading plugin: sscanf
+[03:45:40] 
+
+[03:45:40]  ===============================
+
+[03:45:40]       sscanf plugin loaded.     
+
+[03:45:40]          Version:  2.8.1        
+
+[03:45:40]    (c) 2012 Alex "Y_Less" Cole  
+
+[03:45:40]  ===============================
+
+[03:45:40]   Loaded.
+[03:45:40]  Loading plugin: pawncmd
+[03:45:40] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[03:45:40]   Loaded.
+[03:45:40]  Loading plugin: pawnregex
+[03:45:40] Pawn.Regex plugin v1.1 by urShadow loaded
+[03:45:40]   Loaded.
+[03:45:40]  Loaded 6 plugins.
+
+[03:45:40] 
+[03:45:40] Filterscripts
+[03:45:40] ---------------
+[03:45:40]   Loaded 0 filterscripts.
+
+[03:45:48] Подключение к MySql установленно
+[03:45:48] 
+----------------------------------
+[03:45:48] --------NEW PROJECT STARTED---------
+[03:45:48] ----------------------------------
+
+[03:45:48] Number of vehicle models: 0
+[03:46:34] [connection] incoming connection: 127.0.0.1:50462 id: 0
+[03:46:34] [join] Sakata_Onaretev has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[03:50:48] filterscripts = ""  (string)
+[03:50:48] 
+[03:50:48] Server Plugins
+[03:50:48] --------------
+[03:50:48]  Loading plugin: mysql
+[03:50:48]  >> plugin.mysql: R41-4 successfully loaded.
+[03:50:48]   Loaded.
+[03:50:48]  Loading plugin: crashdetect
+[03:50:48]   CrashDetect v4.18.1 is OK.
+[03:50:48]   Loaded.
+[03:50:48]  Loading plugin: streamer
+[03:50:48] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[03:50:48]   Loaded.
+[03:50:48]  Loading plugin: sscanf
+[03:50:48] 
+
+[03:50:48]  ===============================
+
+[03:50:48]       sscanf plugin loaded.     
+
+[03:50:48]          Version:  2.8.1        
+
+[03:50:48]    (c) 2012 Alex "Y_Less" Cole  
+
+[03:50:48]  ===============================
+
+[03:50:48]   Loaded.
+[03:50:48]  Loading plugin: pawncmd
+[03:50:48] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[03:50:48]   Loaded.
+[03:50:48]  Loading plugin: pawnregex
+[03:50:48] Pawn.Regex plugin v1.1 by urShadow loaded
+[03:50:48]   Loaded.
+[03:50:48]  Loaded 6 plugins.
+
+[03:50:48] 
+[03:50:48] Filterscripts
+[03:50:48] ---------------
+[03:50:48]   Loaded 0 filterscripts.
+
+[03:50:56] Подключение к MySql установленно
+[03:50:56] 
+----------------------------------
+[03:50:56] --------NEW PROJECT STARTED---------
+[03:50:56] ----------------------------------
+
+[03:50:56] Number of vehicle models: 0
+[03:51:01] [connection] incoming connection: 127.0.0.1:57190 id: 0
+[03:51:01] [join] Sakata_Onaretev has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[03:54:48] filterscripts = ""  (string)
+[03:54:48] 
+[03:54:48] Server Plugins
+[03:54:48] --------------
+[03:54:48]  Loading plugin: mysql
+[03:54:48]  >> plugin.mysql: R41-4 successfully loaded.
+[03:54:48]   Loaded.
+[03:54:48]  Loading plugin: crashdetect
+[03:54:48]   CrashDetect v4.18.1 is OK.
+[03:54:48]   Loaded.
+[03:54:48]  Loading plugin: streamer
+[03:54:48] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[03:54:48]   Loaded.
+[03:54:48]  Loading plugin: sscanf
+[03:54:48] 
+
+[03:54:48]  ===============================
+
+[03:54:48]       sscanf plugin loaded.     
+
+[03:54:48]          Version:  2.8.1        
+
+[03:54:48]    (c) 2012 Alex "Y_Less" Cole  
+
+[03:54:48]  ===============================
+
+[03:54:48]   Loaded.
+[03:54:48]  Loading plugin: pawncmd
+[03:54:48] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[03:54:48]   Loaded.
+[03:54:48]  Loading plugin: pawnregex
+[03:54:48] Pawn.Regex plugin v1.1 by urShadow loaded
+[03:54:48]   Loaded.
+[03:54:48]  Loaded 6 plugins.
+
+[03:54:48] 
+[03:54:48] Filterscripts
+[03:54:48] ---------------
+[03:54:48]   Loaded 0 filterscripts.
+
+[03:54:56] Подключение к MySql установленно
+[03:54:56] 
+----------------------------------
+[03:54:56] --------NEW PROJECT STARTED---------
+[03:54:56] ----------------------------------
+
+[03:54:56] Number of vehicle models: 0
+[03:55:09] [connection] incoming connection: 127.0.0.1:55929 id: 0
+[03:55:09] [join] Sakata_Onaretev has joined the server (0:127.0.0.1)
+[04:03:05] [part] Sakata_Onaretev has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[18:28:38] filterscripts = ""  (string)
+[18:28:38] 
+[18:28:38] Server Plugins
+[18:28:38] --------------
+[18:28:38]  Loading plugin: mysql
+[18:28:38]  >> plugin.mysql: R41-4 successfully loaded.
+[18:28:38]   Loaded.
+[18:28:38]  Loading plugin: crashdetect
+[18:28:38]   CrashDetect v4.18.1 is OK.
+[18:28:38]   Loaded.
+[18:28:38]  Loading plugin: streamer
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[18:28:38] filterscripts = ""  (string)
+[18:28:38] 
+[18:28:38] Server Plugins
+[18:28:38] --------------
+[18:28:38]  Loading plugin: mysql
+[18:28:38]  >> plugin.mysql: R41-4 successfully loaded.
+[18:28:38]   Loaded.
+[18:28:38]  Loading plugin: crashdetect
+[18:28:38]   CrashDetect v4.18.1 is OK.
+[18:28:38]   Loaded.
+[18:28:38]  Loading plugin: streamer
+[18:28:38] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[18:28:38]   Loaded.
+[18:28:38]  Loading plugin: sscanf
+[18:28:38] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[18:28:38]   Loaded.
+[18:28:38]  Loading plugin: sscanf
+[18:28:38] 
+
+[18:28:38]  ===============================
+
+[18:28:38]  ===============================
+
+[18:28:38]       sscanf plugin loaded.     
+
+[18:28:38]          Version:  2.8.1        
+
+[18:28:38]    (c) 2012 Alex "Y_Less" Cole  
+
+[18:28:38]          Version:  2.8.1        
+
+[18:28:38]    (c) 2012 Alex "Y_Less" Cole  
+
+[18:28:38]  ===============================
+
+[18:28:38]   Loaded.
+[18:28:38]   Loaded.
+ugin: pawncmd
+[18:28:38]  Loading plugin: pawncmd
+[18:28:38] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[18:28:38]   Loaded.
+[18:28:38]  Loading plugin: pawnregex
+[18:28:38] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[18:28:38]   Loaded.
+[18:28:38]  Loading plugin: pawnregex
+[18:28:38] Pawn.Regex plugin v1.1 by urShadow loaded
+[18:28:38]   Loaded.
+[18:28:38]  Loaded 6 plugins.
+
+[18:28:38] Pawn.Regex plugin v1.1 by urShadow loaded
+[18:28:38]   Loaded.
+[18:28:38]  Loaded 6 plugins.
+
+[18:28:38] 
+[18:28:38] Filterscripts
+[18:28:38] ---------------
+[18:28:38]   Loaded 0 filterscripts.
+
+[18:28:38] 
+[18:28:38] Filterscripts
+[18:28:38] ---------------
+[18:28:38]   Loaded 0 filterscripts.
+
+[18:28:54] MySql НЕ РАБОТАЕТ!!!
+[18:28:54] 
+----------------------------------
+[18:28:54] --------NEW PROJECT STARTED---------
+[18:28:54] ----------------------------------
+
+[18:28:54] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[18:30:35] filterscripts = ""  (string)
+[18:30:35] 
+[18:30:35] Server Plugins
+[18:30:35] --------------
+[18:30:35]  Loading plugin: mysql
+[18:30:35]  >> plugin.mysql: R41-4 successfully loaded.
+[18:30:35]   Loaded.
+[18:30:35]  Loading plugin: crashdetect
+[18:30:35]   CrashDetect v4.18.1 is OK.
+[18:30:35]   Loaded.
+[18:30:35]  Loading plugin: streamer
+[18:30:35] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[18:30:35]   Loaded.
+[18:30:35]  Loading plugin: sscanf
+[18:30:35] 
+
+[18:30:35]  ===============================
+
+[18:30:35]       sscanf plugin loaded.     
+
+[18:30:35]          Version:  2.8.1        
+
+[18:30:35]    (c) 2012 Alex "Y_Less" Cole  
+
+[18:30:35]  ===============================
+
+[18:30:35]   Loaded.
+[18:30:35]  Loading plugin: pawncmd
+[18:30:35] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[18:30:35]   Loaded.
+[18:30:35]  Loading plugin: pawnregex
+[18:30:35] Pawn.Regex plugin v1.1 by urShadow loaded
+[18:30:35]   Loaded.
+[18:30:35]  Loaded 6 plugins.
+
+[18:30:35] 
+[18:30:35] Filterscripts
+[18:30:35] ---------------
+[18:30:35]   Loaded 0 filterscripts.
+
+[18:30:43] Подключение к MySql установленно
+[18:30:43] 
+----------------------------------
+[18:30:43] --------NEW PROJECT STARTED---------
+[18:30:43] ----------------------------------
+
+[18:30:43] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[18:33:48] filterscripts = ""  (string)
+[18:33:48] 
+[18:33:48] Server Plugins
+[18:33:48] --------------
+[18:33:48]  Loading plugin: mysql
+[18:33:48]  >> plugin.mysql: R41-4 successfully loaded.
+[18:33:48]   Loaded.
+[18:33:48]  Loading plugin: crashdetect
+[18:33:48]   CrashDetect v4.18.1 is OK.
+[18:33:48]   Loaded.
+[18:33:48]  Loading plugin: streamer
+[18:33:48] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[18:33:48]   Loaded.
+[18:33:48]  Loading plugin: sscanf
+[18:33:48] 
+
+[18:33:48]  ===============================
+
+[18:33:48]       sscanf plugin loaded.     
+
+[18:33:48]          Version:  2.8.1        
+
+[18:33:48]    (c) 2012 Alex "Y_Less" Cole  
+
+[18:33:48]  ===============================
+
+[18:33:48]   Loaded.
+[18:33:48]  Loading plugin: pawncmd
+[18:33:48] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[18:33:48]   Loaded.
+[18:33:48]  Loading plugin: pawnregex
+[18:33:48] Pawn.Regex plugin v1.1 by urShadow loaded
+[18:33:48]   Loaded.
+[18:33:48]  Loaded 6 plugins.
+
+[18:33:48] 
+[18:33:48] Filterscripts
+[18:33:48] ---------------
+[18:33:48]   Loaded 0 filterscripts.
+
+[18:33:56] Подключение к MySql установленно
+[18:33:56] 
+----------------------------------
+[18:33:56] --------NEW PROJECT STARTED---------
+[18:33:56] ----------------------------------
+
+[18:33:56] Number of vehicle models: 0
+[18:34:28] [connection] incoming connection: 127.0.0.1:55285 id: 0
+[18:34:28] [join] Sakata_Onaretev has joined the server (0:127.0.0.1)
+[18:35:19] [part] Sakata_Onaretev has left the server (0:1)
+[18:35:48] [connection] incoming connection: 127.0.0.1:62646 id: 0
+[18:35:48] [join] Pokimon has joined the server (0:127.0.0.1)
+[18:36:43] [part] Pokimon has left the server (0:1)
+[18:37:20] [connection] incoming connection: 127.0.0.1:60792 id: 0
+[18:37:21] [join] Pokimon has joined the server (0:127.0.0.1)
+[18:37:32] [part] Pokimon has left the server (0:1)
+[18:38:50] [connection] incoming connection: 127.0.0.1:63315 id: 0
+[18:38:50] [join] Sakata_Onaretev has joined the server (0:127.0.0.1)
+[18:39:09] [part] Sakata_Onaretev has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[19:06:43] filterscripts = ""  (string)
+[19:06:43] 
+[19:06:43] Server Plugins
+[19:06:43] --------------
+[19:06:43]  Loading plugin: mysql
+[19:06:43]  >> plugin.mysql: R41-4 successfully loaded.
+[19:06:43]   Loaded.
+[19:06:43]  Loading plugin: crashdetect
+[19:06:43]   CrashDetect v4.18.1 is OK.
+[19:06:43]   Loaded.
+[19:06:43]  Loading plugin: streamer
+[19:06:43] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[19:06:43]   Loaded.
+[19:06:43]  Loading plugin: sscanf
+[19:06:43] 
+
+[19:06:43]  ===============================
+
+[19:06:43]       sscanf plugin loaded.     
+
+[19:06:43]          Version:  2.8.1        
+
+[19:06:43]    (c) 2012 Alex "Y_Less" Cole  
+
+[19:06:43]  ===============================
+
+[19:06:43]   Loaded.
+[19:06:43]  Loading plugin: pawncmd
+[19:06:43] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[19:06:43]   Loaded.
+[19:06:43]  Loading plugin: pawnregex
+[19:06:43] Pawn.Regex plugin v1.1 by urShadow loaded
+[19:06:43]   Loaded.
+[19:06:43]  Loaded 6 plugins.
+
+[19:06:43] 
+[19:06:43] Filterscripts
+[19:06:43] ---------------
+[19:06:43]   Loaded 0 filterscripts.
+
+[19:06:51] Подключение к MySql установленно
+[19:06:51] 
+----------------------------------
+[19:06:51] --------NEW PROJECT STARTED---------
+[19:06:51] ----------------------------------
+
+[19:06:51] Number of vehicle models: 0
+[19:07:13] [connection] incoming connection: 127.0.0.1:60432 id: 0
+[19:07:13] [join] Sakata_Onaretev has joined the server (0:127.0.0.1)
+[19:09:23] [debug] Server received interrupt signal
+[19:09:23] [debug] Native backtrace:
+[19:09:23] [debug] #0 77ad99ec in ?? () from C:\WINDOWS\SYSTEM32\ntdll.dll
+[19:09:23] [debug] #1 7716df70 in ?? () from C:\WINDOWS\System32\KERNELBASE.dll
+[19:09:23] [debug] #2 7716df0f in ?? () from C:\WINDOWS\System32\KERNELBASE.dll
+[19:09:23] [debug] #3 0048d53c in ?? () from samp-server.exe
+[19:09:23] [debug] #4 0049b531 in ?? () from samp-server.exe
+[19:09:23] [debug] #5 0049b541 in ?? () from samp-server.exe
+[19:09:23] --- Server Shutting Down.
+[19:09:23] [part] Sakata_Onaretev has left the server (0:0)
+[19:09:23] plugin.mysql: Unloading plugin...
+[19:09:23] plugin.mysql: Plugin unloaded.
+[19:09:23] 
+
+*** Streamer Plugin v2.8.2 by Incognito unloaded ***
+
+[19:09:23] 
+
+[19:09:23]  ===============================
+
+[19:09:23]      sscanf plugin unloaded.    
+
+[19:09:23]  ===============================
+
+[19:09:23] Pawn.CMD plugin v3.1.4 by urShadow unloaded
+[19:09:23] Pawn.Regex plugin v1.1 by urShadow unloaded
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[19:45:43] filterscripts = ""  (string)
+[19:45:43] 
+[19:45:43] Server Plugins
+[19:45:43] --------------
+[19:45:43]  Loading plugin: mysql
+[19:45:43]  >> plugin.mysql: R41-4 successfully loaded.
+[19:45:43]   Loaded.
+[19:45:43]  Loading plugin: crashdetect
+[19:45:43]   CrashDetect v4.18.1 is OK.
+[19:45:43]   Loaded.
+[19:45:43]  Loading plugin: streamer
+[19:45:43] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[19:45:43]   Loaded.
+[19:45:43]  Loading plugin: sscanf
+[19:45:43] 
+
+[19:45:43]  ===============================
+
+[19:45:43]       sscanf plugin loaded.     
+
+[19:45:43]          Version:  2.8.1        
+
+[19:45:43]    (c) 2012 Alex "Y_Less" Cole  
+
+[19:45:43]  ===============================
+
+[19:45:43]   Loaded.
+[19:45:43]  Loading plugin: pawncmd
+[19:45:43] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[19:45:43]   Loaded.
+[19:45:43]  Loading plugin: pawnregex
+[19:45:43] Pawn.Regex plugin v1.1 by urShadow loaded
+[19:45:43]   Loaded.
+[19:45:43]  Loaded 6 plugins.
+
+[19:45:43] 
+[19:45:43] Filterscripts
+[19:45:43] ---------------
+[19:45:43]   Loaded 0 filterscripts.
+
+[19:45:51] Подключение к MySql установленно
+[19:45:51] 
+----------------------------------
+[19:45:51] --------NEW PROJECT STARTED---------
+[19:45:51] ----------------------------------
+
+[19:45:51] Number of vehicle models: 0
+[19:46:12] [connection] incoming connection: 127.0.0.1:60506 id: 0
+[19:46:12] [join] Sakata_Onaretev has joined the server (0:127.0.0.1)
+[19:46:27] [part] Sakata_Onaretev has left the server (0:1)
+[19:48:26] [connection] incoming connection: 127.0.0.1:55822 id: 0
+[19:48:26] [join] Poki has joined the server (0:127.0.0.1)
+[19:48:39] [part] Poki has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[19:49:46] filterscripts = ""  (string)
+[19:49:46] 
+[19:49:46] Server Plugins
+[19:49:46] --------------
+[19:49:46]  Loading plugin: mysql
+[19:49:46]  >> plugin.mysql: R41-4 successfully loaded.
+[19:49:46]   Loaded.
+[19:49:46]  Loading plugin: crashdetect
+[19:49:46]   CrashDetect v4.18.1 is OK.
+[19:49:46]   Loaded.
+[19:49:46]  Loading plugin: streamer
+[19:49:46] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[19:49:46]   Loaded.
+[19:49:46]  Loading plugin: sscanf
+[19:49:46] 
+
+[19:49:46]  ===============================
+
+[19:49:46]       sscanf plugin loaded.     
+
+[19:49:46]          Version:  2.8.1        
+
+[19:49:46]    (c) 2012 Alex "Y_Less" Cole  
+
+[19:49:46]  ===============================
+
+[19:49:46]   Loaded.
+[19:49:46]  Loading plugin: pawncmd
+[19:49:46] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[19:49:46]   Loaded.
+[19:49:46]  Loading plugin: pawnregex
+[19:49:46] Pawn.Regex plugin v1.1 by urShadow loaded
+[19:49:46]   Loaded.
+[19:49:46]  Loaded 6 plugins.
+
+[19:49:46] 
+[19:49:46] Filterscripts
+[19:49:46] ---------------
+[19:49:46]   Loaded 0 filterscripts.
+
+[19:49:54] Подключение к MySql установленно
+[19:49:54] 
+----------------------------------
+[19:49:54] --------NEW PROJECT STARTED---------
+[19:49:54] ----------------------------------
+
+[19:49:54] Number of vehicle models: 0
+[19:49:54] [connection] incoming connection: 127.0.0.1:62195 id: 0
+[19:49:54] [join] Poki has joined the server (0:127.0.0.1)
+[19:50:37] [part] Poki has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[19:52:22] filterscripts = ""  (string)
+[19:52:22] 
+[19:52:22] Server Plugins
+[19:52:22] --------------
+[19:52:22]  Loading plugin: mysql
+[19:52:22]  >> plugin.mysql: R41-4 successfully loaded.
+[19:52:22]   Loaded.
+[19:52:22]  Loading plugin: crashdetect
+[19:52:22]   CrashDetect v4.18.1 is OK.
+[19:52:22]   Loaded.
+[19:52:22]  Loading plugin: streamer
+[19:52:22] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[19:52:22]   Loaded.
+[19:52:22]  Loading plugin: sscanf
+[19:52:22] 
+
+[19:52:22]  ===============================
+
+[19:52:22]       sscanf plugin loaded.     
+
+[19:52:22]          Version:  2.8.1        
+
+[19:52:22]    (c) 2012 Alex "Y_Less" Cole  
+
+[19:52:22]  ===============================
+
+[19:52:22]   Loaded.
+[19:52:22]  Loading plugin: pawncmd
+[19:52:22] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[19:52:22]   Loaded.
+[19:52:22]  Loading plugin: pawnregex
+[19:52:22] Pawn.Regex plugin v1.1 by urShadow loaded
+[19:52:22]   Loaded.
+[19:52:22]  Loaded 6 plugins.
+
+[19:52:22] 
+[19:52:22] Filterscripts
+[19:52:22] ---------------
+[19:52:22]   Loaded 0 filterscripts.
+
+[19:52:30] Подключение к MySql установленно
+[19:52:30] 
+----------------------------------
+[19:52:30] --------NEW PROJECT STARTED---------
+[19:52:30] ----------------------------------
+
+[19:52:30] Number of vehicle models: 0
+[19:52:52] [connection] incoming connection: 127.0.0.1:54413 id: 0
+[19:52:52] [join] Poki has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[19:59:48] filterscripts = ""  (string)
+[19:59:48] 
+[19:59:48] Server Plugins
+[19:59:48] --------------
+[19:59:48]  Loading plugin: mysql
+[19:59:48]  >> plugin.mysql: R41-4 successfully loaded.
+[19:59:48]   Loaded.
+[19:59:48]  Loading plugin: crashdetect
+[19:59:48]   CrashDetect v4.18.1 is OK.
+[19:59:48]   Loaded.
+[19:59:48]  Loading plugin: streamer
+[19:59:48] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[19:59:48]   Loaded.
+[19:59:48]  Loading plugin: sscanf
+[19:59:48] 
+
+[19:59:48]  ===============================
+
+[19:59:48]       sscanf plugin loaded.     
+
+[19:59:48]          Version:  2.8.1        
+
+[19:59:48]    (c) 2012 Alex "Y_Less" Cole  
+
+[19:59:48]  ===============================
+
+[19:59:48]   Loaded.
+[19:59:48]  Loading plugin: pawncmd
+[19:59:48] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[19:59:48]   Loaded.
+[19:59:48]  Loading plugin: pawnregex
+[19:59:48] Pawn.Regex plugin v1.1 by urShadow loaded
+[19:59:48]   Loaded.
+[19:59:48]  Loaded 6 plugins.
+
+[19:59:48] 
+[19:59:48] Filterscripts
+[19:59:48] ---------------
+[19:59:48]   Loaded 0 filterscripts.
+
+[19:59:56] Подключение к MySql установленно
+[19:59:56] 
+----------------------------------
+[19:59:56] --------NEW PROJECT STARTED---------
+[19:59:56] ----------------------------------
+
+[19:59:56] Number of vehicle models: 0
+[20:00:03] [connection] incoming connection: 127.0.0.1:62973 id: 0
+[20:00:03] [join] Poki has joined the server (0:127.0.0.1)
+[20:00:11] [part] Poki has left the server (0:1)
+[20:00:58] [connection] incoming connection: 127.0.0.1:56309 id: 0
+[20:00:59] [join] Poki has joined the server (0:127.0.0.1)
+[20:01:26] [part] Poki has left the server (0:1)
+[20:03:31] [debug] Server received interrupt signal
+[20:03:31] [debug] Native backtrace:
+[20:03:31] [debug] #0 77ad99ec in ?? () from C:\WINDOWS\SYSTEM32\ntdll.dll
+[20:03:31] [debug] #1 7716df70 in ?? () from C:\WINDOWS\System32\KERNELBASE.dll
+[20:03:31] [debug] #2 7716df0f in ?? () from C:\WINDOWS\System32\KERNELBASE.dll
+[20:03:31] [debug] #3 0048d53c in ?? () from samp-server.exe
+[20:03:31] [debug] #4 0049b531 in ?? () from samp-server.exe
+[20:03:31] [debug] #5 0049b541 in ?? () from samp-server.exe
+[20:03:31] --- Server Shutting Down.
+[20:03:31] plugin.mysql: Unloading plugin...
+[20:03:31] plugin.mysql: Plugin unloaded.
+[20:03:31] 
+
+*** Streamer Plugin v2.8.2 by Incognito unloaded ***
+
+[20:03:31] 
+
+[20:03:31]  ===============================
+
+[20:03:31]      sscanf plugin unloaded.    
+
+[20:03:31]  ===============================
+
+[20:03:31] Pawn.CMD plugin v3.1.4 by urShadow unloaded
+[20:03:31] Pawn.Regex plugin v1.1 by urShadow unloaded
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:03:37] filterscripts = ""  (string)
+[20:03:37] 
+[20:03:37] Server Plugins
+[20:03:37] --------------
+[20:03:37]  Loading plugin: mysql
+[20:03:37]  >> plugin.mysql: R41-4 successfully loaded.
+[20:03:37]   Loaded.
+[20:03:37]  Loading plugin: crashdetect
+[20:03:37]   CrashDetect v4.18.1 is OK.
+[20:03:37]   Loaded.
+[20:03:37]  Loading plugin: streamer
+[20:03:37] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[20:03:37]   Loaded.
+[20:03:37]  Loading plugin: sscanf
+[20:03:37] 
+
+[20:03:37]  ===============================
+
+[20:03:37]       sscanf plugin loaded.     
+
+[20:03:37]          Version:  2.8.1        
+
+[20:03:37]    (c) 2012 Alex "Y_Less" Cole  
+
+[20:03:37]  ===============================
+
+[20:03:37]   Loaded.
+[20:03:37]  Loading plugin: pawncmd
+[20:03:37] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[20:03:37]   Loaded.
+[20:03:37]  Loading plugin: pawnregex
+[20:03:37] Pawn.Regex plugin v1.1 by urShadow loaded
+[20:03:37]   Loaded.
+[20:03:37]  Loaded 6 plugins.
+
+[20:03:37] 
+[20:03:37] Filterscripts
+[20:03:37] ---------------
+[20:03:37]   Loaded 0 filterscripts.
+
+[20:03:45] Подключение к MySql установленно
+[20:03:45] 
+----------------------------------
+[20:03:45] --------NEW PROJECT STARTED---------
+[20:03:45] ----------------------------------
+
+[20:03:45] Number of vehicle models: 0
+[20:03:55] [connection] incoming connection: 127.0.0.1:62683 id: 0
+[20:03:55] [join] Poki has joined the server (0:127.0.0.1)
+[20:12:53] [part] Poki has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:13:05] filterscripts = ""  (string)
+[20:13:05] 
+[20:13:05] Server Plugins
+[20:13:05] --------------
+[20:13:05]  Loading plugin: mysql
+[20:13:05]  >> plugin.mysql: R41-4 successfully loaded.
+[20:13:05]   Loaded.
+[20:13:05]  Loading plugin: crashdetect
+[20:13:05]   CrashDetect v4.18.1 is OK.
+[20:13:05]   Loaded.
+[20:13:05]  Loading plugin: streamer
+[20:13:05] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[20:13:05]   Loaded.
+[20:13:05]  Loading plugin: sscanf
+[20:13:05] 
+
+[20:13:05]  ===============================
+
+[20:13:05]       sscanf plugin loaded.     
+
+[20:13:05]          Version:  2.8.1        
+
+[20:13:05]    (c) 2012 Alex "Y_Less" Cole  
+
+[20:13:05]  ===============================
+
+[20:13:05]   Loaded.
+[20:13:05]  Loading plugin: pawncmd
+[20:13:05] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[20:13:05]   Loaded.
+[20:13:05]  Loading plugin: pawnregex
+[20:13:05] Pawn.Regex plugin v1.1 by urShadow loaded
+[20:13:05]   Loaded.
+[20:13:05]  Loaded 6 plugins.
+
+[20:13:05] 
+[20:13:05] Filterscripts
+[20:13:05] ---------------
+[20:13:05]   Loaded 0 filterscripts.
+
+[20:13:13] Подключение к MySql установленно
+[20:13:13] 
+----------------------------------
+[20:13:13] --------NEW PROJECT STARTED---------
+[20:13:13] ----------------------------------
+
+[20:13:13] Number of vehicle models: 0
+[20:13:39] [connection] incoming connection: 127.0.0.1:53350 id: 0
+[20:13:39] [join] Poki has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:15:22] filterscripts = ""  (string)
+[20:15:22] 
+[20:15:22] Server Plugins
+[20:15:22] --------------
+[20:15:22]  Loading plugin: mysql
+[20:15:22]  >> plugin.mysql: R41-4 successfully loaded.
+[20:15:22]   Loaded.
+[20:15:22]  Loading plugin: crashdetect
+[20:15:22]   CrashDetect v4.18.1 is OK.
+[20:15:22]   Loaded.
+[20:15:22]  Loading plugin: streamer
+[20:15:22] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[20:15:22]   Loaded.
+[20:15:22]  Loading plugin: sscanf
+[20:15:22] 
+
+[20:15:22]  ===============================
+
+[20:15:22]       sscanf plugin loaded.     
+
+[20:15:22]          Version:  2.8.1        
+
+[20:15:22]    (c) 2012 Alex "Y_Less" Cole  
+
+[20:15:22]  ===============================
+
+[20:15:22]   Loaded.
+[20:15:22]  Loading plugin: pawncmd
+[20:15:22] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[20:15:22]   Loaded.
+[20:15:22]  Loading plugin: pawnregex
+[20:15:22] Pawn.Regex plugin v1.1 by urShadow loaded
+[20:15:22]   Loaded.
+[20:15:22]  Loaded 6 plugins.
+
+[20:15:22] 
+[20:15:22] Filterscripts
+[20:15:22] ---------------
+[20:15:22]   Loaded 0 filterscripts.
+
+[20:15:30] Подключение к MySql установленно
+[20:15:30] 
+----------------------------------
+[20:15:30] --------NEW PROJECT STARTED---------
+[20:15:30] ----------------------------------
+
+[20:15:30] Number of vehicle models: 0
+[20:15:30] [connection] incoming connection: 127.0.0.1:56661 id: 0
+[20:15:30] [join] Poki has joined the server (0:127.0.0.1)
+[20:15:40] [part] Poki has left the server (0:0)
+[20:15:53] [connection] incoming connection: 127.0.0.1:64613 id: 0
+[20:15:53] [join] Poki has joined the server (0:127.0.0.1)
+[20:16:05] [part] Poki has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:16:24] filterscripts = ""  (string)
+[20:16:24] 
+[20:16:24] Server Plugins
+[20:16:24] --------------
+[20:16:24]  Loading plugin: mysql
+[20:16:24]  >> plugin.mysql: R41-4 successfully loaded.
+[20:16:24]   Loaded.
+[20:16:24]  Loading plugin: crashdetect
+[20:16:24]   CrashDetect v4.18.1 is OK.
+[20:16:24]   Loaded.
+[20:16:24]  Loading plugin: streamer
+[20:16:24] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[20:16:24]   Loaded.
+[20:16:24]  Loading plugin: sscanf
+[20:16:24] 
+
+[20:16:24]  ===============================
+
+[20:16:24]       sscanf plugin loaded.     
+
+[20:16:24]          Version:  2.8.1        
+
+[20:16:24]    (c) 2012 Alex "Y_Less" Cole  
+
+[20:16:24]  ===============================
+
+[20:16:24]   Loaded.
+[20:16:24]  Loading plugin: pawncmd
+[20:16:24] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[20:16:24]   Loaded.
+[20:16:24]  Loading plugin: pawnregex
+[20:16:24] Pawn.Regex plugin v1.1 by urShadow loaded
+[20:16:24]   Loaded.
+[20:16:24]  Loaded 6 plugins.
+
+[20:16:24] 
+[20:16:24] Filterscripts
+[20:16:24] ---------------
+[20:16:24]   Loaded 0 filterscripts.
+
+[20:16:32] Подключение к MySql установленно
+[20:16:32] 
+----------------------------------
+[20:16:32] --------NEW PROJECT STARTED---------
+[20:16:32] ----------------------------------
+
+[20:16:32] Number of vehicle models: 0
+[20:16:53] [connection] incoming connection: 127.0.0.1:55973 id: 0
+[20:16:53] [join] Poki has joined the server (0:127.0.0.1)
+[20:17:25] [part] Poki has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:17:33] filterscripts = ""  (string)
+[20:17:33] 
+[20:17:33] Server Plugins
+[20:17:33] --------------
+[20:17:33]  Loading plugin: mysql
+[20:17:33]  >> plugin.mysql: R41-4 successfully loaded.
+[20:17:33]   Loaded.
+[20:17:33]  Loading plugin: crashdetect
+[20:17:33]   CrashDetect v4.18.1 is OK.
+[20:17:33]   Loaded.
+[20:17:33]  Loading plugin: streamer
+[20:17:33] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[20:17:33]   Loaded.
+[20:17:33]  Loading plugin: sscanf
+[20:17:33] 
+
+[20:17:33]  ===============================
+
+[20:17:33]       sscanf plugin loaded.     
+
+[20:17:33]          Version:  2.8.1        
+
+[20:17:33]    (c) 2012 Alex "Y_Less" Cole  
+
+[20:17:33]  ===============================
+
+[20:17:33]   Loaded.
+[20:17:33]  Loading plugin: pawncmd
+[20:17:33] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[20:17:33]   Loaded.
+[20:17:33]  Loading plugin: pawnregex
+[20:17:33] Pawn.Regex plugin v1.1 by urShadow loaded
+[20:17:33]   Loaded.
+[20:17:33]  Loaded 6 plugins.
+
+[20:17:33] 
+[20:17:33] Filterscripts
+[20:17:33] ---------------
+[20:17:33]   Loaded 0 filterscripts.
+
+[20:17:41] Подключение к MySql установленно
+[20:17:41] 
+----------------------------------
+[20:17:41] --------NEW PROJECT STARTED---------
+[20:17:41] ----------------------------------
+
+[20:17:41] Number of vehicle models: 0
+[20:18:01] [connection] incoming connection: 127.0.0.1:54853 id: 0
+[20:18:01] [join] Poki has joined the server (0:127.0.0.1)
+[20:25:07] [part] Poki has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:26:04] filterscripts = ""  (string)
+[20:26:04] 
+[20:26:04] Server Plugins
+[20:26:04] --------------
+[20:26:04]  Loading plugin: mysql
+[20:26:04]  >> plugin.mysql: R41-4 successfully loaded.
+[20:26:04]   Loaded.
+[20:26:04]  Loading plugin: crashdetect
+[20:26:04]   CrashDetect v4.18.1 is OK.
+[20:26:04]   Loaded.
+[20:26:04]  Loading plugin: streamer
+[20:26:04] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[20:26:04]   Loaded.
+[20:26:04]  Loading plugin: sscanf
+[20:26:04] 
+
+[20:26:04]  ===============================
+
+[20:26:04]       sscanf plugin loaded.     
+
+[20:26:04]          Version:  2.8.1        
+
+[20:26:04]    (c) 2012 Alex "Y_Less" Cole  
+
+[20:26:04]  ===============================
+
+[20:26:04]   Loaded.
+[20:26:04]  Loading plugin: pawncmd
+[20:26:04] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[20:26:04]   Loaded.
+[20:26:04]  Loading plugin: pawnregex
+[20:26:04] Pawn.Regex plugin v1.1 by urShadow loaded
+[20:26:04]   Loaded.
+[20:26:04]  Loaded 6 plugins.
+
+[20:26:04] 
+[20:26:04] Filterscripts
+[20:26:04] ---------------
+[20:26:04]   Loaded 0 filterscripts.
+
+[20:26:12] Подключение к MySql установленно
+[20:26:12] 
+----------------------------------
+[20:26:12] --------NEW PROJECT STARTED---------
+[20:26:12] ----------------------------------
+
+[20:26:12] Number of vehicle models: 0
+[20:27:29] [connection] incoming connection: 127.0.0.1:56502 id: 0
+[20:27:29] [join] Poki has joined the server (0:127.0.0.1)
+[20:28:17] [part] Poki has left the server (0:1)
+[20:29:06] [connection] incoming connection: 127.0.0.1:53688 id: 0
+[20:29:06] [join] Sakata has joined the server (0:127.0.0.1)
+[20:31:31] [part] Sakata has left the server (0:1)
+[20:31:39] [debug] Server received interrupt signal
+[20:31:39] [debug] Native backtrace:
+[20:31:39] [debug] #0 77ad99ec in ?? () from C:\WINDOWS\SYSTEM32\ntdll.dll
+[20:31:39] [debug] #1 7716df70 in ?? () from C:\WINDOWS\System32\KERNELBASE.dll
+[20:31:39] [debug] #2 7716df0f in ?? () from C:\WINDOWS\System32\KERNELBASE.dll
+[20:31:39] [debug] #3 0048d53c in ?? () from samp-server.exe
+[20:31:39] [debug] #4 0049b531 in ?? () from samp-server.exe
+[20:31:39] [debug] #5 0049b541 in ?? () from samp-server.exe
+[20:31:39] --- Server Shutting Down.
+[20:31:39] plugin.mysql: Unloading plugin...
+[20:31:39] plugin.mysql: Plugin unloaded.
+[20:31:39] 
+
+*** Streamer Plugin v2.8.2 by Incognito unloaded ***
+
+[20:31:39] 
+
+[20:31:39]  ===============================
+
+[20:31:39]      sscanf plugin unloaded.    
+
+[20:31:39]  ===============================
+
+[20:31:39] Pawn.CMD plugin v3.1.4 by urShadow unloaded
+[20:31:39] Pawn.Regex plugin v1.1 by urShadow unloaded

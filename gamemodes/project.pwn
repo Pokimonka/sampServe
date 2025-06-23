@@ -42,7 +42,17 @@ enum player
 {
 	ID,
 	NAME[MAX_PLAYER_NAME],
-	PASSWORD[32],
+	PASSWORD[65],
+	SALT[11],
+	EMAIL[65],
+	REF,
+	SEX,
+	RACE,
+	AGE,
+	SKIN,
+	REGDATA[13],
+	REGIP[16]
+	
 }
 
 new player_info[MAX_PLAYERS][player];
@@ -52,6 +62,10 @@ enum dialogs
 	DLG_NONE,
 	DLG_REG,
 	DLG_REGEMAIL,
+	DLG_REGREF,
+	DLG_REGSEX,
+	DLG_REGRACE,
+	DLG_REGAGE,
 	DLG_LOG,
 }
 
@@ -86,7 +100,12 @@ public OnPlayerRequestClass(playerid, classid)
 public OnPlayerConnect(playerid)
 {
 	GetPlayerName(playerid, player_info[playerid][NAME], MAX_PLAYER_NAME);
-	static const fmt_query[] = "SELECT id FROM users WHERE name = '%s'";
+	TogglePlayerSpectating(playerid, 1);
+
+	InterpolateCameraPos(playerid, 1280.6528, -2037.6846, 75.6408+12.0, 13.4005, -2087.5444, 35.9909, 25000);
+	InterpolateCameraLookAt(playerid, 446.5704, -2036.88773, 35.9909-12.0, 367.5072, -1855.4072, 11.2948, 25000);
+
+	static const fmt_query[] = "SELECT password, salt FROM users WHERE name = '%s'";
 	new query[sizeof(fmt_query[])+(-2+MAX_PLAYER_NAME)];
 	format(query, sizeof(query), fmt_query, player_info[playerid][NAME]);
 	mysql_tquery(dbHandle, query, "CheckRegistration", "i", playerid);
@@ -98,7 +117,12 @@ public CheckRegistration(playerid)
 {
 	new rows;
 	cache_get_row_count(rows);
-	if(rows) ShowLogin(playerid);
+	if(rows)
+	{
+		cache_get_value_name(0, "password", player_info[playerid][PASSWORD], 64);
+		cache_get_value_name(0, "salt", player_info[playerid][SALT], 10);
+		ShowLogin(playerid);
+	} 
 	else ShowRegistration(playerid);
 }
 
@@ -288,24 +312,26 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 {
 	switch(dialogid)
 	{
-  		case DLG_REG:
+		case DLG_REG:
   		{
   		    if(response)
 		  	{
-				if(!strlen(inputtext))
-				{
-				    ShowRegistration(playerid);
-				    return SCM(playerid, COLOR_RED, "[Ошибка] {FFFFFF} Введите пароль в поле ниже и нажмите далее");
-				}
-				if(strlen(inputtext) < 8 || strlen(inputtext) > 32)
+				if(!(8 <= (strlen(inputtext)) <= 32))
 				{
     				ShowRegistration(playerid);
 				    return SCM(playerid, COLOR_RED, "[Ошибка] {FFFFFF} Длина пароля должна быть от 8 до 32 символов");
 				}
-				new regex:rg_passwordcheck = regex_new("^[a-zA-Z0-9]{1,}$$");
+				new regex:rg_passwordcheck = regex_new("^[a-zA-Z0-9]{1,}$");
 				if(regex_check(inputtext, rg_passwordcheck))
 				{
-					strmid(player_info[playerid][PASSWORD], inputtext, 0, strlen(inputtext), 32);
+				    new salt[11];
+				    for (new i; i < 10; i++)
+				    {
+				        salt[i] = random(79) + 47;
+					}
+					salt[10] = 0;
+					SHA256_PassHash(inputtext, salt, player_info[playerid][PASSWORD], 65);
+					strmid(player_info[playerid][SALT], salt, 0, 11, 11);
 					SPD(playerid, DLG_REGEMAIL, DIALOG_STYLE_INPUT, "{de0007}Регистрация{FFFFFF} • Ввод Email",
 						"{FFFFFF}Введите ваш Email-адрес\n\
 		 				Если вы потеряете доступ к аккаунту, то сможете восстановить его с помощью Email\n\
@@ -315,8 +341,11 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				else
 				{
 					ShowRegistration(playerid);
+					regex_delete(rg_passwordcheck);
 				    return SCM(playerid, COLOR_RED, "[Ошибка] {FFFFFF} Пароль может состоять только из латинских символов и цифр");
 				}
+				regex_delete(rg_passwordcheck);
+
   		    }
 			else
 			{
@@ -324,9 +353,202 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				SPD(playerid, -1, 0, " ", " ", " ", "");
 				return Kick(playerid);
 			}
-		
-  		    
   		}
+  		case DLG_REGEMAIL:
+		{
+			if(!strlen(inputtext))
+			{
+			    SPD(playerid, DLG_REGEMAIL, DIALOG_STYLE_INPUT, "{de0007}Регистрация{FFFFFF} • Ввод Email",
+						"{FFFFFF}Введите ваш Email-адрес\n\
+		 				Если вы потеряете доступ к аккаунту, то сможете восстановить его с помощью Email\n\
+					 	Введите его в поле ниже и нажмите \"Далее\"",
+				"Далее","");
+				 return SCM(playerid, COLOR_RED, "[Ошибка] {FFFFFF} Введите Email в поле ниже и нажмите \"Далее\"");
+			}
+			new regex:rg_emailcheck = regex_new("^[a-zA-Z0-9._-]{1,43}@[a-zA-Z]{1,12}.[a-zA-Z]{1,8}$");
+            if(regex_check(inputtext, rg_emailcheck))
+			{
+				strmid(player_info[playerid][EMAIL], inputtext, 0, strlen(inputtext), 64);
+				SPD(playerid, DLG_REGREF, DIALOG_STYLE_INPUT, "{de0007}Регистрация{FFFFFF} • Ввод пригласившего",
+				"{FFFFFF}Введи ник игрока, который тебя пригласил, в поле ниже",
+				"Далее", "Пропустить");
+				
+			}
+			else
+			{
+				SPD(playerid, DLG_REGEMAIL, DIALOG_STYLE_INPUT, "{de0007}Регистрация{FFFFFF} • Ввод Email",
+					"{FFFFFF}Введите ваш Email-адрес\n\
+	 				Если вы потеряете доступ к аккаунту, то сможете восстановить его с помощью Email\n\
+				 	Введите его в поле ниже и нажмите \"Далее\"",
+				"Далее","");
+				regex_delete(rg_emailcheck);
+			    return SCM(playerid, COLOR_RED, "[Ошибка] {FFFFFF} Укажите правильный Email");
+			}
+			regex_delete(rg_emailcheck);
+
+		}
+		case DLG_REGREF:
+		{
+		    if (response)
+		    {
+				static const fmt_query[] = "SELECT * FROM users WHERE name = '%s'";
+				new query[sizeof(fmt_query[])+(-2+MAX_PLAYER_NAME)];
+				format(query, sizeof(query), fmt_query, inputtext);
+				mysql_tquery(dbHandle, query, "CheckReferal", "is", playerid, inputtext);
+			}
+		    else 
+		    {
+		        SPD(playerid, DLG_REGSEX, DIALOG_STYLE_MSGBOX, "{de0007}Регистрация{FFFFFF} • Выбор пола персонажа",
+		        "{FFFFFF}Выберете пол вашего персонгажа",
+		        "Мужской", "Женский");
+			}
+		}
+		case DLG_REGSEX:
+		{
+			player_info[playerid][SEX] = (response) ? 1 : 2;
+			SPD(playerid, DLG_REGRACE, DIALOG_STYLE_LIST, "{de0007}Регистрация{FFFFFF} • Выбор расы",
+			"Негроидная\n\
+			Европеоидная\n\
+			Аизиатская",
+			"Далее", "");
+		}
+		case DLG_REGRACE:
+		{
+			player_info[playerid][RACE] = listitem + 1;
+			SPD(playerid, DLG_REGAGE, DIALOG_STYLE_INPUT, "{de0007}Регистрация{FFFFFF} • Выбор возраста",
+			"{FFFFFF}Выберете возраст вашего персонгажа\n\
+			{de0007}•Введите возраст от 18 до 60",
+			"Далее", "");
+		}
+		case DLG_REGAGE:
+		{
+			if(!(18 <= (strval(inputtext)) <= 60))
+			{
+			     SPD(playerid, DLG_REGAGE, DIALOG_STYLE_INPUT, "{de0007}Регистрация{FFFFFF} • Выбор возраста",
+				"{FFFFFF}Выберете возраст вашего персонгажа\n\
+				{de0007}•Введите возраст от 18 до 60",
+				"Далее", "");
+				return SCM(playerid, COLOR_RED, "[Ошибка] Введите возраст от 18 до 60");
+			} 
+			player_info[playerid][AGE] = strval(inputtext);
+			/*
+			3 расы на каждый диапазон возраста
+			18-29
+			30-45
+			46-60
+			*/
+			new regmaleskins[9][4] =
+			{	{19,21,22,28}, //негроидная 18-29
+				{24,25,36,67}, //негроидная 30-45
+				{14,142,182,183}, //негроидная 46-60
+				{29,96,101,26},//европиоидная 18-29
+				{2,37,72,202}, //европиоидная 30-45
+				{1,3,234,290}, //европиоидная 46-60
+				{23,60,170,180}, //азиатская 18-29
+				{20,47,48,206}, //азиатская 30-45
+				{44,58,132,229} //азиатская 46-60
+			};
+			new regfemaleskins[9][2] =
+			{	{13,69},
+				{9,190},
+				{10,218},
+				{41,56},
+				{31,151},
+				{39,89},
+				{169,193},
+				{207,22},
+				{54,130}
+			};
+			 new newskinindex;
+			 switch(player_info[playerid][RACE])
+			 {
+ 				case 1: {}
+ 				case 2: newskinindex += 3;
+ 				case 3: newskinindex += 6;
+			 }
+			 switch(player_info[playerid][AGE])
+			 {
+ 				case 18..29: {}
+ 				case 30..45: newskinindex++;
+ 				case 46..60: newskinindex += 2;
+			 }
+			if(player_info[playerid][SEX] == 1)	player_info[playerid][SKIN] = regmaleskins[newskinindex][random(4)];
+			else player_info[playerid][SKIN] = regfemaleskins[newskinindex][random(2)];
+			new Year, Month, Day;
+			getdate(Year, Month, Day);
+			new date[12];
+			format(date, sizeof(date), "%02d.%02d.%02d", Day, Month, Year);
+			new ip[15];
+   			GetPlayerIp(playerid, ip, sizeof(ip));
+            static const fmt_query[] = "INSERT INTO users (name,  password,  salt,  email,  ref,   sex,   race,   age,  skin, regdata, regip) VALUES ('%s',   '%s',    '%s',   '%s',  '%d',  '%d',   '%d',  '%d', '%d',   '%s',   '%s')";
+			new query[sizeof(fmt_query)+(-2+MAX_PLAYER_NAME)+(-2+64)+(-2+10)+(-2+64)+(-2+8)+(-2+1)+(-2+1)+(-2+2)+(-2+3)+(-2+12)+(-2+15)];
+			format(query, sizeof(query), fmt_query, player_info[playerid][NAME],
+													player_info[playerid][PASSWORD],
+													player_info[playerid][SALT],
+													player_info[playerid][EMAIL],
+													player_info[playerid][REF],
+													player_info[playerid][SEX],
+													player_info[playerid][RACE],
+													player_info[playerid][AGE],
+													player_info[playerid][SKIN],
+													date,
+													ip);
+			mysql_query(dbHandle, query);
+
+			static const fmt_query2[] = "SELECT * FROM users WHERE name = '%s' AND password = '%s'";
+			format(query, sizeof(query), fmt_query2,  player_info[playerid][NAME], player_info[playerid][PASSWORD]);
+			mysql_tquery(dbHandle, query, "PlayerLogin", "i", playerid);
+
+		}
+		
+	}
+	return 1;
+}
+
+forward PlayerLogin(playerid);
+public PlayerLogin(playerid) 
+{
+	new rows;
+	cache_get_row_count(rows);
+	if(rows)
+	{
+		cache_get_value_name_int(0, "id", player_info[playerid][ID]);
+		cache_get_value_name(0, "emial", player_info[playerid][EMAIL], 64);
+		cache_get_value_name_int(0, "ref", player_info[playerid][REF]);
+		cache_get_value_name_int(0, "sex", player_info[playerid][SEX]);
+		cache_get_value_name_int(0, "race", player_info[playerid][RACE]);	
+		cache_get_value_name_int(0, "age", player_info[playerid][AGE]);
+		cache_get_value_name_int(0, "iskind", player_info[playerid][SKIN]);
+		cache_get_value_name(0, "regdata", player_info[playerid][REGDATA], 12);
+		cache_get_value_name(0, "regip", player_info[playerid][SKIN], 15);
+		
+		TogglePlayerSpectating(playerid, 0);
+		SetPVarInt(playerid, "logged", 1);
+		SetSpawnInfo(playerid, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+		SpawnPlayer(playerid);
+	}
+	return 1;
+}
+
+forward CheckReferal(playerid, referal[]);
+public CheckReferal(playerid, referal[])
+{
+    new rows;
+	cache_get_row_count(rows);
+	if(rows)
+	{
+  		cache_get_value_name_int(0, "id", player_info[playerid][REF]);
+  		SPD(playerid, DLG_REGSEX, DIALOG_STYLE_MSGBOX, "{de0007}Регистрация{FFFFFF} • Выбор пола персонажа",
+    	"{FFFFFF}Выберете пол вашего персонажа",
+     	"Мужской", "Женский");
+	}
+	else
+	{
+	    SPD(playerid, DLG_REGREF, DIALOG_STYLE_INPUT, "{de0007}Регистрация{FFFFFF} • Ввод пригласившего",
+		"{FFFFFF}Введи ник игрока, который тебя пригласил, в поле ниже",
+		"Далее", "Пропустить");
+	    return SCM(playerid, COLOR_RED, "[Ошибка] {FFFFFF} Аккаунта с таким ником не существует");
+	
 	}
 	return 1;
 }
@@ -334,4 +556,12 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 public OnPlayerClickPlayer(playerid, clickedplayerid, source)
 {
 	return 1;
+}
+
+CMD:spawn(playerid)
+{
+	TogglePlayerSpectating(playerid, 0);
+	SetPVarInt(playerid, "logged", 1);
+	SetSpawnInfo(playerid, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+	SpawnPlayer(playerid);
 }
