@@ -34,6 +34,7 @@ main()
 //------------------------------   Мусорка   -----------------------------------
 
 new MySQL:dbHandle;
+new PlayerAFK[MAX_PLAYERS];
 //------------------------------------------------------------------------------
 
 //==============================================================================
@@ -51,7 +52,9 @@ enum player
 	AGE,
 	SKIN,
 	REGDATA[13],
-	REGIP[16]
+	REGIP[16],
+	ADMIN,
+	MONEY,
 	
 }
 
@@ -72,6 +75,7 @@ enum dialogs
 public OnGameModeInit()
 {
 	ConnectMySQL();
+	SetTimer("SecondUpdate", 1000, true);
 	return 1;
 }
 
@@ -92,6 +96,16 @@ public OnGameModeExit()
 	return 1;
 }
 
+forward SecondUpdate();
+public SecondUpdate()
+{
+	foreach(new i: Player)
+	{
+		PlayerAFK[i]++;
+	}
+	return 1;
+}
+
 public OnPlayerRequestClass(playerid, classid)
 {
 	return 1;
@@ -102,13 +116,16 @@ public OnPlayerConnect(playerid)
 	GetPlayerName(playerid, player_info[playerid][NAME], MAX_PLAYER_NAME);
 	TogglePlayerSpectating(playerid, 1);
 
-	InterpolateCameraPos(playerid, 1280.6528, -2037.6846, 75.6408+12.0, 13.4005, -2087.5444, 35.9909, 25000);
-	InterpolateCameraLookAt(playerid, 446.5704, -2036.88773, 35.9909-12.0, 367.5072, -1855.4072, 11.2948, 25000);
+	InterpolateCameraPos(playerid, 1280.6528, -2037.6846, 75.6408+12.0, 13.4005, -2087.5444, 35.9909, 20000);
+	InterpolateCameraLookAt(playerid, 446.5704, -2036.88773, 35.9909-12.0, 367.5072, -1855.4072, 11.2948, 20000);
 
-	static const fmt_query[] = "SELECT password, salt FROM users WHERE name = '%s'";
-	new query[sizeof(fmt_query[])+(-2+MAX_PLAYER_NAME)];
+	static const fmt_query[] = "SELECT pass, salt FROM users WHERE name = '%s'";
+	new query[sizeof(fmt_query)+(-2+MAX_PLAYER_NAME)];
 	format(query, sizeof(query), fmt_query, player_info[playerid][NAME]);
+	printf("rows: %s", player_info[playerid][NAME]);
 	mysql_tquery(dbHandle, query, "CheckRegistration", "i", playerid);
+
+	SetPVarInt(playerid, "WrongPassword", 3);
 	return 1;
 }
 
@@ -119,8 +136,8 @@ public CheckRegistration(playerid)
 	cache_get_row_count(rows);
 	if(rows)
 	{
-		cache_get_value_name(0, "password", player_info[playerid][PASSWORD], 64);
-		cache_get_value_name(0, "salt", player_info[playerid][SALT], 10);
+		cache_get_value_name(0, "pass", player_info[playerid][PASSWORD], 65);
+		cache_get_value_name(0, "salt", player_info[playerid][SALT], 11);
 		ShowLogin(playerid);
 	} 
 	else ShowRegistration(playerid);
@@ -128,8 +145,16 @@ public CheckRegistration(playerid)
 
 stock ShowLogin(playerid)
 {
-	SCM(playerid, COLOR_WHITE, "Игрок зарегистрирован");
-}
+	new dialog[171+(-2+MAX_PLAYER_NAME)];
+	format(dialog, sizeof(dialog), 
+		"{FFFFFF}Уважаемый {0089ff}%s {FFFFFF}, с возвращением вас на {0089ff} YOUR RP {FFFFFF}\n\
+		\tМы рады снова видеть вас\n\n\
+		Для продолжения введите свой пароль в поле ниже:",
+		player_info[playerid][NAME]
+	);
+	SPD(playerid, DLG_LOG, DIALOG_STYLE_INPUT, "{de0007}Авторизация{FFFFFF}", dialog, "Войти", "Выход");
+
+} 
 
 stock ShowRegistration(playerid)
 {
@@ -143,7 +168,7 @@ stock ShowRegistration(playerid)
 		(от 8 до 32 символов)",
 		player_info[playerid][NAME]
 	);
-	SPD(playerid, DLG_REG, DIALOG_STYLE_INPUT, "{de0007}Регистрация{FFFFFF} • Ввод пароля", dialog, "Далее", "Выход");
+	SPD(playerid, DLG_REG, DIALOG_STYLE_INPUT, "{de0007}Регистрация{FFFFFF} • Ввод пароля", dialog, "Войти", "Выход");
 	
 }
 
@@ -155,6 +180,12 @@ public OnPlayerDisconnect(playerid, reason)
 
 public OnPlayerSpawn(playerid)
 {
+	if(GetPVarInt(playerid, "logged") == 0)
+	{
+		SCM(playerid, COLOR_RED, "[Ошибка] {FFFFFF}Для игры на сервере вы должны авторизоваться");
+		return Kick(playerid);
+	}
+	SetPlayerSkin(playerid, player_info[playerid][SKIN]);
 	return 1;
 }
 
@@ -285,6 +316,12 @@ public OnRconLoginAttempt(ip[], password[], success)
 
 public OnPlayerUpdate(playerid)
 {
+	PlayerAFK[playerid] = 0;
+	if(GetPlayerMoney(playerid) != player_info[playerid][MONEY])
+	{
+		ResetPlayerMoney(playerid);
+		GivePlayerMoney(playerid, player_info[playerid][MONEY]);
+	}
 	return 1;
 }
 
@@ -480,7 +517,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			format(date, sizeof(date), "%02d.%02d.%02d", Day, Month, Year);
 			new ip[15];
    			GetPlayerIp(playerid, ip, sizeof(ip));
-            static const fmt_query[] = "INSERT INTO users (name,  password,  salt,  email,  ref,   sex,   race,   age,  skin, regdata, regip) VALUES ('%s',   '%s',    '%s',   '%s',  '%d',  '%d',   '%d',  '%d', '%d',   '%s',   '%s')";
+            static const fmt_query[] = "INSERT INTO users (name,  pass,  salt,  email,  ref,   sex,   race,   age,  skin, regdata, regip) VALUES ('%s',   '%s',    '%s',   '%s',  '%d',  '%d',   '%d',  '%d', '%d',   '%s',   '%s')";
 			new query[sizeof(fmt_query)+(-2+MAX_PLAYER_NAME)+(-2+64)+(-2+10)+(-2+64)+(-2+8)+(-2+1)+(-2+1)+(-2+2)+(-2+3)+(-2+12)+(-2+15)];
 			format(query, sizeof(query), fmt_query, player_info[playerid][NAME],
 													player_info[playerid][PASSWORD],
@@ -495,9 +532,52 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 													ip);
 			mysql_query(dbHandle, query);
 
-			static const fmt_query2[] = "SELECT * FROM users WHERE name = '%s' AND password = '%s'";
+			static const fmt_query2[] = "SELECT * FROM users WHERE name = '%s' AND pass = '%s'";
 			format(query, sizeof(query), fmt_query2,  player_info[playerid][NAME], player_info[playerid][PASSWORD]);
 			mysql_tquery(dbHandle, query, "PlayerLogin", "i", playerid);
+
+		}
+		case DLG_LOG:
+		{
+			if(response)
+		  	{
+				new checkpass[65];
+				SHA256_PassHash(inputtext, player_info[playerid][SALT], checkpass, 65);
+				if(!strcmp(player_info[playerid][PASSWORD], checkpass))
+				{
+					static const fmt_query[] = "SELECT * FROM users WHERE name = '%s' AND pass = '%s'";
+					new query[sizeof(fmt_query)+(-2+MAX_PLAYER_NAME)+(-2+64)];
+
+					format(query, sizeof(query), fmt_query,  player_info[playerid][NAME], player_info[playerid][PASSWORD]);
+					mysql_tquery(dbHandle, query, "PlayerLogin", "i", playerid);
+				}
+				else
+				{
+					new string[67];
+					SetPVarInt(playerid, "WrongPassword", GetPVarInt(playerid, "WrongPassword")-1);
+					if (GetPVarInt(playerid, "WrongPassword") > 0)
+					{
+						format(string, sizeof(string), "[Ошибка] {FFFFFF}Введен неверный пароль. У вас осталось %d попыток.", GetPVarInt(playerid, "WrongPassword"));
+						SCM(playerid, COLOR_RED, string);
+					}
+					if (GetPVarInt(playerid, "WrongPassword") == 0)
+					{
+						SCM(playerid, COLOR_RED, "[Ошибка] {FFFFFF}Лимит попыток исчерпаню Вы отключены от сервера.");
+						SPD(playerid, -1, 0, " ", " ", " ", "");
+
+						return Kick(playerid);
+					}
+
+					ShowLogin(playerid);
+
+				}
+			}
+			else
+			{
+				SCM(playerid, COLOR_RED, "Используйте \"/q\" чтобы покинуть сервер");
+				SPD(playerid, -1, 0, " ", " ", " ", "");
+				return Kick(playerid);
+			}
 
 		}
 		
@@ -513,15 +593,17 @@ public PlayerLogin(playerid)
 	if(rows)
 	{
 		cache_get_value_name_int(0, "id", player_info[playerid][ID]);
-		cache_get_value_name(0, "emial", player_info[playerid][EMAIL], 64);
+		cache_get_value_name(0, "emial", player_info[playerid][EMAIL], 65);
 		cache_get_value_name_int(0, "ref", player_info[playerid][REF]);
 		cache_get_value_name_int(0, "sex", player_info[playerid][SEX]);
 		cache_get_value_name_int(0, "race", player_info[playerid][RACE]);	
 		cache_get_value_name_int(0, "age", player_info[playerid][AGE]);
-		cache_get_value_name_int(0, "iskind", player_info[playerid][SKIN]);
-		cache_get_value_name(0, "regdata", player_info[playerid][REGDATA], 12);
-		cache_get_value_name(0, "regip", player_info[playerid][SKIN], 15);
-		
+		cache_get_value_name_int(0, "skin", player_info[playerid][SKIN]);
+		cache_get_value_name(0, "regdata", player_info[playerid][REGDATA], 13);
+		cache_get_value_name(0, "regip", player_info[playerid][REGIP], 16);	
+		cache_get_value_name(0, "admin", player_info[playerid][ADMIN]);	
+		cache_get_value_name(0, "money", player_info[playerid][MONEY]);	
+
 		TogglePlayerSpectating(playerid, 0);
 		SetPVarInt(playerid, "logged", 1);
 		SetSpawnInfo(playerid, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
@@ -558,10 +640,15 @@ public OnPlayerClickPlayer(playerid, clickedplayerid, source)
 	return 1;
 }
 
-CMD:spawn(playerid)
-{
-	TogglePlayerSpectating(playerid, 0);
-	SetPVarInt(playerid, "logged", 1);
-	SetSpawnInfo(playerid, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-	SpawnPlayer(playerid);
+stock GiveMoney(playerid, money)
+{	
+	player_info[playerid][MONEY] += money;
+	static const fmt_query[] = "UPDATE users SET money = '%d' WHERE id = '%d'";
+	new query[sizeof(fmt_query)+(-2+9)+(-2+8)];
+	format(query, sizeof(query), fmt_query, player_info[playerid][MONEY], player_info[playerid][ID]);
+	printf("rows: %s", player_info[playerid][NAME]);
+	mysql_query(dbHandle, query);
+	GivePlayerMoney(playerid, money);
 }
+
+

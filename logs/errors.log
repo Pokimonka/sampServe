@@ -1,2 +1,4 @@
-[20:27:29] [plugins/mysql] error #1054 while executing query "SELECT password, salt ": Unknown column 'password' in 'field list' (C:\Dev\OurServerSAMP\ServerClean\gamemodes\project.pwn:111)
-[20:29:06] [plugins/mysql] error #1054 while executing query "SELECT password, salt ": Unknown column 'password' in 'field list' (C:\Dev\OurServerSAMP\ServerClean\gamemodes\project.pwn:111)
+[01:47:42] [plugins/mysql] cache_get_value_name: field 'emial' not found (C:\Dev\OurServerSAMP\ServerClean\gamemodes\project.pwn:576)
+[01:49:08] [plugins/mysql] cache_get_value_name: field 'emial' not found (C:\Dev\OurServerSAMP\ServerClean\gamemodes\project.pwn:576)
+[01:52:02] [plugins/mysql] cache_get_value_name: field 'emial' not found (C:\Dev\OurServerSAMP\ServerClean\gamemodes\project.pwn:576)
+[01:53:47] [plugins/mysql] cache_get_value_name: field 'emial' not found (C:\Dev\OurServerSAMP\ServerClean\gamemodes\project.pwn:576)
