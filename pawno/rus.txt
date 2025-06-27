@@ -1,13 +1,13 @@
-C:\Dev\OurServerSAMP\ServerClean\gamemodes\project.pwn(397) : неправильная табуляция
-C:\Dev\OurServerSAMP\ServerClean\gamemodes\project.pwn(462) : неправильная табуляция
-C:\Dev\OurServerSAMP\ServerClean\gamemodes\project.pwn(493) : неправильная табуляция
-C:\Dev\OurServerSAMP\ServerClean\gamemodes\project.pwn(506) : неправильная табуляция
+C:\Dev\OurServerSAMP\ServerClean\gamemodes\project.pwn(452) : неправильная табуляция
+C:\Dev\OurServerSAMP\ServerClean\gamemodes\project.pwn(517) : неправильная табуляция
+C:\Dev\OurServerSAMP\ServerClean\gamemodes\project.pwn(548) : неправильная табуляция
+C:\Dev\OurServerSAMP\ServerClean\gamemodes\project.pwn(561) : неправильная табуляция
 Pawn compiler 3.2.3664	 	 	Copyright (c) 1997-2017, ITB CompuPhase
 
-Размер заголовка:	    2776 байт
-Размер кода:		   47472 байт
-Размер данных:		 1110648 байт
+Размер заголовка:	    3052 байт
+Размер кода:		   55756 байт
+Размер данных:		 1115520 байт
 Размер стэка\кучи:	 4194304 байт; Примерное макс. использование=827 ячеек (3308 байт)
-Всего требуется:	 5355200 байт
+Всего требуется:	 5368632 байт
 
 Готово.

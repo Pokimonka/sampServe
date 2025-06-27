@@ -19,6 +19,7 @@
 
 #define COLOR_WHITE   0xFFFFFFFF
 #define COLOR_RED     0xFF0000FF
+#define COLOR_GREY 	  0x00ff00AA
 
 
 
@@ -102,6 +103,21 @@ public SecondUpdate()
 	foreach(new i: Player)
 	{
 		PlayerAFK[i]++;
+		if (PlayerAFK[i] >= 1)
+		{
+			new string[] = "{FF0000}AFK";
+			if(PlayerAFK[i] < 60)
+			{
+				format(string, sizeof(string), "%s%d сек.", string, PlayerAFK);
+			}
+			else
+			{
+				new minute = floatround(PlayerAFK[1]/60, floatround_floor);
+				new second = PlayerAFK[i] % 60;
+				format(string, sizeof(string), "%s%d мин. %d сек.", string, minute, second);
+			}
+			SetPlayerChatBubble(i, string, -1, 20, 1000);
+		}
 	}
 	return 1;
 }
@@ -122,8 +138,8 @@ public OnPlayerConnect(playerid)
 	static const fmt_query[] = "SELECT pass, salt FROM users WHERE name = '%s'";
 	new query[sizeof(fmt_query)+(-2+MAX_PLAYER_NAME)];
 	format(query, sizeof(query), fmt_query, player_info[playerid][NAME]);
-	printf("rows: %s", player_info[playerid][NAME]);
 	mysql_tquery(dbHandle, query, "CheckRegistration", "i", playerid);
+	SCM(playerid, COLOR_RED, player_info[playerid][NAME]);
 
 	SetPVarInt(playerid, "WrongPassword", 3);
 	return 1;
@@ -206,11 +222,44 @@ public OnVehicleDeath(vehicleid, killerid)
 
 public OnPlayerText(playerid, text[])
 {
+	if(GetPVarInt(playerid, "logged") == 0)
+	{
+		SCM(playerid, COLOR_RED, "[Ошибка] {FFFFFF}Для напсиания сообщения в чате вы должны авторизоваться");
+		return Kick(playerid);
+	} 
+	else 
+	{
+		new string[144];
+		if (strlen(text) < 113) 
+		{
+			format(string, sizeof(string), "%s[%d]: %s", player_info[playerid][NAME], playerid, text);
+			ProxDetector(20.0, playerid, string, COLOR_WHITE, COLOR_WHITE, COLOR_WHITE, COLOR_WHITE, COLOR_WHITE);
+			SetPlayerChatBubble(playerid, text, COLOR_WHITE, 20, 7500);
+			if (GetPlayerState(playerid) == PLAYER_STATE_ONFOOT)
+			{
+				ApplyAnimation(playerid, "PED", "IDLE_chat", 4.1, 0 ,1, 1, 1, 1);
+				SetTimerEx("StopChatAnim", 3200, false, "d", playerid);
+			}
+		}
+		else
+		{
+			SCM(playerid, COLOR_GREY, "Слишком длинное сообшение");
+			return 0;
+		}
+	}
+	return 0;
+}
+
+forward StopChatAnim(playerid);
+public StopChatAnim(playerid) 
+{
+	ApplyAnimation(playerid, "PED", "facanger", 4.1, 0 ,1, 1, 1, 1);
 	return 1;
 }
 
 public OnPlayerCommandText(playerid, cmdtext[])
 {
+
 	return 0;
 }
 
@@ -531,11 +580,9 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 													date,
 													ip);
 			mysql_query(dbHandle, query);
-
 			static const fmt_query2[] = "SELECT * FROM users WHERE name = '%s' AND pass = '%s'";
 			format(query, sizeof(query), fmt_query2,  player_info[playerid][NAME], player_info[playerid][PASSWORD]);
 			mysql_tquery(dbHandle, query, "PlayerLogin", "i", playerid);
-
 		}
 		case DLG_LOG:
 		{
@@ -547,7 +594,6 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				{
 					static const fmt_query[] = "SELECT * FROM users WHERE name = '%s' AND pass = '%s'";
 					new query[sizeof(fmt_query)+(-2+MAX_PLAYER_NAME)+(-2+64)];
-
 					format(query, sizeof(query), fmt_query,  player_info[playerid][NAME], player_info[playerid][PASSWORD]);
 					mysql_tquery(dbHandle, query, "PlayerLogin", "i", playerid);
 				}
@@ -567,9 +613,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 						return Kick(playerid);
 					}
-
 					ShowLogin(playerid);
-
 				}
 			}
 			else
@@ -593,7 +637,7 @@ public PlayerLogin(playerid)
 	if(rows)
 	{
 		cache_get_value_name_int(0, "id", player_info[playerid][ID]);
-		cache_get_value_name(0, "emial", player_info[playerid][EMAIL], 65);
+		cache_get_value_name(0, "email", player_info[playerid][EMAIL], 65);
 		cache_get_value_name_int(0, "ref", player_info[playerid][REF]);
 		cache_get_value_name_int(0, "sex", player_info[playerid][SEX]);
 		cache_get_value_name_int(0, "race", player_info[playerid][RACE]);	
@@ -601,13 +645,17 @@ public PlayerLogin(playerid)
 		cache_get_value_name_int(0, "skin", player_info[playerid][SKIN]);
 		cache_get_value_name(0, "regdata", player_info[playerid][REGDATA], 13);
 		cache_get_value_name(0, "regip", player_info[playerid][REGIP], 16);	
-		cache_get_value_name(0, "admin", player_info[playerid][ADMIN]);	
-		cache_get_value_name(0, "money", player_info[playerid][MONEY]);	
+		cache_get_value_name_int(0, "admin", player_info[playerid][ADMIN]);	
+		cache_get_value_name_int(0, "money", player_info[playerid][MONEY]);	
 
+		new str[9];
+		format(str, sizeof(str), "%d", player_info[playerid][ADMIN]);
+		SCM(playerid, COLOR_GREY, str);
 		TogglePlayerSpectating(playerid, 0);
 		SetPVarInt(playerid, "logged", 1);
 		SetSpawnInfo(playerid, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 		SpawnPlayer(playerid);
+
 	}
 	return 1;
 }
@@ -640,15 +688,78 @@ public OnPlayerClickPlayer(playerid, clickedplayerid, source)
 	return 1;
 }
 
+// public OnPlayerClickMap(playerid, Float:fX, Float:fY, Float:fZ)
+// {
+// 	printf("%d", player_info[playerid][ADMIN]);
+// 	SCM(playerid, COLOR_RED, "ClickMap");
+// 	if(player_info[playerid][ADMIN] >= 4) 
+// 	{
+// 		if (GetPlayerState(playerid) == PLAYER_STATE_DRIVER)
+// 		{
+// 			SetVehiclePos(GetPlayerVehicleID(playerid), fX, fY, fZ);
+// 			PutPlayerInVehicle(playerid, GetPlayerVehicleID(playerid), 0);
+// 		}
+// 		else
+// 		{
+// 			SetPlayerPos(playerid, fX, fY, fZ);
+// 		}
+// 		SetPlayerVirtualWorld(playerid, 0);
+// 		SetPlayerInterior(playerid, 0);
+// 	} 
+//     return 1;
+// }
+
+public OnPlayerClickMap(playerid, Float:fX, Float:fY, Float:fZ)
+{
+	printf("%d", player_info[playerid][ADMIN]);
+	SCM(playerid, COLOR_RED, "ClickMap");
+    SetPlayerPos(playerid, fX, fY, fZ);
+    return 1;
+}
+
+
 stock GiveMoney(playerid, money)
 {	
 	player_info[playerid][MONEY] += money;
 	static const fmt_query[] = "UPDATE users SET money = '%d' WHERE id = '%d'";
 	new query[sizeof(fmt_query)+(-2+9)+(-2+8)];
 	format(query, sizeof(query), fmt_query, player_info[playerid][MONEY], player_info[playerid][ID]);
-	printf("rows: %s", player_info[playerid][NAME]);
 	mysql_query(dbHandle, query);
 	GivePlayerMoney(playerid, money);
 }
 
+stock ProxDetector(Float:radi, playerid, string[], col1,col2,col3,col4,col5)
+{
+	if(IsPlayerConnected(playerid))
+	{
+		new Float:posx;new Float:posy;new Float:posz;new Float:oldposx;new Float:oldposy;new Float:oldposz;new Float:tempposx;new Float:tempposy;new Float:tempposz;
+		GetPlayerPos(playerid, oldposx, oldposy, oldposz);
+		foreach(new i:Player)
+		{
+			if(IsPlayerConnected(i))
+			{
+				if(GetPlayerVirtualWorld(playerid) == GetPlayerVirtualWorld(i))
+				{
+					GetPlayerPos(i, posx, posy, posz);
+					tempposx = (oldposx - posx);
+					tempposy = (oldposy - posy);
+					tempposz = (oldposz - posz);
+					if(((tempposx < radi/16) && (tempposx > -radi/16)) && ((tempposy < radi/16) && (tempposy > -radi/16)) && ((tempposz < radi/16) && (tempposz > -radi/16))) SCM(i, col1, string);
+					else if(((tempposx < radi/8) && (tempposx > -radi/8)) && ((tempposy < radi/8) && (tempposy > -radi/8)) && ((tempposz < radi/8) && (tempposz > -radi/8))) SCM(i, col2, string);
+					else if(((tempposx < radi/4) && (tempposx > -radi/4)) && ((tempposy < radi/4) && (tempposy > -radi/4)) && ((tempposz < radi/4) && (tempposz > -radi/4))) SCM(i, col3, string);
+					else if(((tempposx < radi/2) && (tempposx > -radi/2)) && ((tempposy < radi/2) && (tempposy > -radi/2)) && ((tempposz < radi/2) && (tempposz > -radi/2))) SCM(i, col4, string);
+					else if(((tempposx < radi) && (tempposx > -radi)) && ((tempposy < radi) && (tempposy > -radi)) && ((tempposz < radi) && (tempposz > -radi))) SCM(i, col5, string);
+				}
+			}
+		}
+	}
+	return 1;
+}
+
+forward anichat(playerid);
+public anichat(playerid) 
+{
+	ApplyAnimation(playerid, "PED", "IDLE_chat", 4.1, 0 ,1, 1, 1, 1);
+	return 1;
+}
 
