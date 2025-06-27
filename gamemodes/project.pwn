@@ -36,6 +36,7 @@ main()
 
 new MySQL:dbHandle;
 new PlayerAFK[MAX_PLAYERS];
+new expmultiply = 4;
 //------------------------------------------------------------------------------
 
 //==============================================================================
@@ -56,7 +57,9 @@ enum player
 	REGIP[16],
 	ADMIN,
 	MONEY,
-	
+	LVL,
+	EXP,
+	MINS,
 }
 
 new player_info[MAX_PLAYERS][player];
@@ -77,6 +80,8 @@ public OnGameModeInit()
 {
 	ConnectMySQL();
 	SetTimer("SecondUpdate", 1000, true);
+	SetTimer("MinuteUpdate", 60000, true);
+
 	return 1;
 }
 
@@ -95,6 +100,33 @@ stock ConnectMySQL()
 public OnGameModeExit()
 {
 	return 1;
+}
+
+forward MinuteUpdate();
+public MinuteUpdate()
+{
+	foreach(new i: Player)
+	{
+		if (PlayerAFK[i] < 2)
+		{
+			player_info[i][MINS]++;
+			if (player_info[i][MINS] >= 60) 
+			{
+				player_info[i][MINS] = 0;
+				PayDay(i);
+			}
+			static const fmt_query[] = "UPDATE users SET mins = '%d' WHERE id = '%d'";
+			new query[sizeof(fmt_query)+(-2+2)+(-2+8)];
+			format(query, sizeof(query), fmt_query, player_info[i][MINS], player_info[i][ID]);
+			mysql_query(dbHandle, query, false);
+		}
+	}
+}
+
+stock PayDay(playerid) 
+{
+	SCM(playerid, COLOR_WHITE, "Зарплата");
+	GiveExp(playerid, 1);
 }
 
 forward SecondUpdate();
@@ -202,6 +234,29 @@ public OnPlayerSpawn(playerid)
 		return Kick(playerid);
 	}
 	SetPlayerSkin(playerid, player_info[playerid][SKIN]);
+	SetPlayerScore(playerid, player_info[playerid][LVL]);
+	switch(random(3))
+	{
+		case 0: 
+		{
+			SCM(playerid, COLOR_GREY, "0");
+			SetPlayerPos(playerid, 1255.0641,-1691.6334,19.7344);
+			SetPlayerFacingAngle(playerid, 90.0);
+		}
+		case 1:
+		{
+			SCM(playerid, COLOR_GREY, "0");
+			SetPlayerPos(playerid, 1224.9067,-1692.1339,19.2270);
+			SetPlayerFacingAngle(playerid, 270.0);
+		}
+		case 2:
+		{
+			SCM(playerid, COLOR_GREY, "0");
+			SetPlayerPos(playerid, 1243.0892,-1699.7878,14.8672);
+			SetPlayerFacingAngle(playerid, 180.0);
+		}
+	}
+	SetCameraBehindPlayer(playerid);
 	return 1;
 }
 
@@ -548,18 +603,16 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			 new newskinindex;
 			 switch(player_info[playerid][RACE])
 			 {
- 				case 1: {}
  				case 2: newskinindex += 3;
  				case 3: newskinindex += 6;
 			 }
 			 switch(player_info[playerid][AGE])
 			 {
- 				case 18..29: {}
  				case 30..45: newskinindex++;
  				case 46..60: newskinindex += 2;
 			 }
-			if(player_info[playerid][SEX] == 1)	player_info[playerid][SKIN] = regmaleskins[newskinindex][random(4)];
-			else player_info[playerid][SKIN] = regfemaleskins[newskinindex][random(2)];
+			
+			player_info[playerid][SKIN] = player_info[playerid][SEX] == 1 ? regmaleskins[newskinindex][random(4)] :  regfemaleskins[newskinindex][random(2)];
 			new Year, Month, Day;
 			getdate(Year, Month, Day);
 			new date[12];
@@ -579,7 +632,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 													player_info[playerid][SKIN],
 													date,
 													ip);
-			mysql_query(dbHandle, query);
+			mysql_query(dbHandle, query, false);
 			static const fmt_query2[] = "SELECT * FROM users WHERE name = '%s' AND pass = '%s'";
 			format(query, sizeof(query), fmt_query2,  player_info[playerid][NAME], player_info[playerid][PASSWORD]);
 			mysql_tquery(dbHandle, query, "PlayerLogin", "i", playerid);
@@ -647,14 +700,18 @@ public PlayerLogin(playerid)
 		cache_get_value_name(0, "regip", player_info[playerid][REGIP], 16);	
 		cache_get_value_name_int(0, "admin", player_info[playerid][ADMIN]);	
 		cache_get_value_name_int(0, "money", player_info[playerid][MONEY]);	
+		cache_get_value_name_int(0, "lvl", player_info[playerid][LVL]);	
+		cache_get_value_name_int(0, "exp", player_info[playerid][EXP]);	
+		cache_get_value_name_int(0, "mins", player_info[playerid][MINS]);	
 
-		new str[9];
-		format(str, sizeof(str), "%d", player_info[playerid][ADMIN]);
+
+		new str[16];
+		format(str, sizeof(str), "admin: %d", player_info[playerid][ADMIN]);
 		SCM(playerid, COLOR_GREY, str);
-		TogglePlayerSpectating(playerid, 0);
 		SetPVarInt(playerid, "logged", 1);
 		SetSpawnInfo(playerid, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-		SpawnPlayer(playerid);
+		TogglePlayerSpectating(playerid, 0);
+
 
 	}
 	return 1;
@@ -688,32 +745,24 @@ public OnPlayerClickPlayer(playerid, clickedplayerid, source)
 	return 1;
 }
 
-// public OnPlayerClickMap(playerid, Float:fX, Float:fY, Float:fZ)
-// {
-// 	printf("%d", player_info[playerid][ADMIN]);
-// 	SCM(playerid, COLOR_RED, "ClickMap");
-// 	if(player_info[playerid][ADMIN] >= 4) 
-// 	{
-// 		if (GetPlayerState(playerid) == PLAYER_STATE_DRIVER)
-// 		{
-// 			SetVehiclePos(GetPlayerVehicleID(playerid), fX, fY, fZ);
-// 			PutPlayerInVehicle(playerid, GetPlayerVehicleID(playerid), 0);
-// 		}
-// 		else
-// 		{
-// 			SetPlayerPos(playerid, fX, fY, fZ);
-// 		}
-// 		SetPlayerVirtualWorld(playerid, 0);
-// 		SetPlayerInterior(playerid, 0);
-// 	} 
-//     return 1;
-// }
-
 public OnPlayerClickMap(playerid, Float:fX, Float:fY, Float:fZ)
 {
 	printf("%d", player_info[playerid][ADMIN]);
 	SCM(playerid, COLOR_RED, "ClickMap");
-    SetPlayerPos(playerid, fX, fY, fZ);
+	if(player_info[playerid][ADMIN] >= 4) 
+	{
+		if (GetPlayerState(playerid) == PLAYER_STATE_DRIVER)
+		{
+			SetVehiclePos(GetPlayerVehicleID(playerid), fX, fY, fZ);
+			PutPlayerInVehicle(playerid, GetPlayerVehicleID(playerid), 0);
+		}
+		else
+		{
+			SetPlayerPos(playerid, fX, fY, fZ);
+		}
+		SetPlayerVirtualWorld(playerid, 0);
+		SetPlayerInterior(playerid, 0);
+	} 
     return 1;
 }
 
@@ -724,7 +773,7 @@ stock GiveMoney(playerid, money)
 	static const fmt_query[] = "UPDATE users SET money = '%d' WHERE id = '%d'";
 	new query[sizeof(fmt_query)+(-2+9)+(-2+8)];
 	format(query, sizeof(query), fmt_query, player_info[playerid][MONEY], player_info[playerid][ID]);
-	mysql_query(dbHandle, query);
+	mysql_query(dbHandle, query, false);
 	GivePlayerMoney(playerid, money);
 }
 
@@ -756,10 +805,22 @@ stock ProxDetector(Float:radi, playerid, string[], col1,col2,col3,col4,col5)
 	return 1;
 }
 
-forward anichat(playerid);
-public anichat(playerid) 
+stock GiveExp(playerid, exp)
 {
-	ApplyAnimation(playerid, "PED", "IDLE_chat", 4.1, 0 ,1, 1, 1, 1);
-	return 1;
+	player_info[playerid][EXP] += exp;
+	new needexp = (player_info[playerid][LVL]+1)*expmultiply;
+	new buffer = player_info[playerid][EXP] - needexp;
+	if (player_info[playerid][EXP] >= needexp)
+	{
+		player_info[playerid][EXP] = 0;
+		if(buffer > 0) player_info[playerid][EXP] += buffer;
+		player_info[playerid][LVL]++;
+		SCM(playerid, COLOR_WHITE, "Ваш уровень повышен");
+		SetPlayerScore(playerid, player_info[playerid][LVL]);
+	}
+	static const fmt_query[] = "UPDATE users SET lvl = '%d', exp = '%d' WHERE id = '%d'";
+	new query[sizeof(fmt_query)+(-2+2)+(-2+8)];
+	format(query, sizeof(query), fmt_query, player_info[playerid][LVL], player_info[playerid][EXP], player_info[playerid][ID]);
+	mysql_query(dbHandle, query, false);
 }
 
