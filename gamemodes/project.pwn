@@ -19,7 +19,9 @@
 
 #define COLOR_WHITE   0xFFFFFFFF
 #define COLOR_RED     0xFF0000FF
-#define COLOR_GREY 	  0x00ff00AA
+#define COLOR_GREY 	  0x999999FF
+#define COLOR_GREEN   0x00ff00AA
+
 
 
 
@@ -824,3 +826,90 @@ stock GiveExp(playerid, exp)
 	mysql_query(dbHandle, query, false);
 }
 
+
+CMD:me(playerid, params[])
+{
+	if(sscanf(params, "s[118]", params[0])) return SCM(playerid, COLOR_GREY, "Используйте /me [текст]");
+	new string[144];
+	format(string, sizeof(string), "%s %s", player_info[playerid][NAME], params[0]);
+	ProxDetector(20.0, playerid, string, 0xDE92FFFF, 0xDE92FFFF, 0xDE92FFFF, 0xDE92FFFF, 0xDE92FFFF);
+	SetPlayerChatBubble(playerid, params[0], 0xDE92FFFF, 20, 7500);
+	return 1;
+}
+
+CMD:ame(playerid, params[])
+{
+	if(sscanf(params, "s", params[0])) return SCM(playerid, COLOR_GREY, "Используйте /ame [текст]");
+	SetPlayerChatBubble(playerid, params[0], 0xDE92FFFF, 20, 7500);
+	return 1;
+}
+
+CMD:do(playerid, params[])
+{
+	if(sscanf(params, "s[116]", params[0])) return SCM(playerid, COLOR_GREY, "Используйте /do [текст]");
+	new string[144];
+	format(string, sizeof(string), "%s (%s)",  params[0], player_info[playerid][NAME]);
+	ProxDetector(20.0, playerid, string, 0xDE92FFFF, 0xDE92FFFF, 0xDE92FFFF, 0xDE92FFFF, 0xDE92FFFF);
+	SetPlayerChatBubble(playerid, params[0], 0xDE92FFFF, 20, 7500);
+	return 1;
+}
+
+CMD:try(playerid, params[])
+{
+	if(sscanf(params, "s[99]", params[0])) return SCM(playerid, COLOR_GREY, "Используйте /try [текст]");
+	new string[144];
+	switch(random(2))
+	{
+		case 0: format(string, sizeof(string), "%s %s | {FF0000}Неудачно", player_info[playerid][NAME], params[0]);
+		case 1: format(string, sizeof(string), "%s %s | {32CD32}Удачно", player_info[playerid][NAME], params[0]);
+	}
+	ProxDetector(20.0, playerid, string, 0xDE92FFFF, 0xDE92FFFF, 0xDE92FFFF, 0xDE92FFFF, 0xDE92FFFF);
+	return 1;
+}
+
+CMD:todo(playerid, params[])
+{
+	if(sscanf(params, "s[95]", params[0])) return SCM(playerid, COLOR_GREY, "Используйте /todo [текст*действие]");
+	if(strlen(params) > 95) return SCM(playerid, COLOR_RED, "Слишоком длинный текст и действие"); 
+	new message[95];
+	strmid(message, params, 0, sizeof(message));
+	new regex:rg_todocheck = regex_new("^[a-zA-Zа-яА-Я.-_,\\s]{2,48}\\*[a-zA-Zа-яА-Я.-_,\\s]{2,48}$");
+	if(regex_check(message, rg_todocheck))
+	{
+		SCM(playerid, COLOR_RED, "regex ok");
+		new star = strfind(message, "*"); 
+		new action[50];
+		strmid(action, message, star + 1, sizeof(message));
+		strdel(message, star, sizeof(message));
+		new string[144];
+		format(string, sizeof(string), "- '%s' - {DE92FF}сказал%s, %s, %s", message, (player_info[playerid][SEX]==1) ? ("") : ("a"),player_info[playerid][NAME], action);
+		ProxDetector(20.0, playerid, string, COLOR_WHITE, COLOR_WHITE, COLOR_WHITE, COLOR_WHITE, COLOR_WHITE);
+		
+	}
+	else SCM(playerid, COLOR_GREY, "Используйте /todo [текст*действие]");
+	regex_delete(rg_todocheck);
+	return 1;
+}
+
+CMD:n(playerid, params[])
+{
+	if(sscanf(params, "s[107]", params[0])) return SCM(playerid, COLOR_GREY, "Используйте /n [сообщение]");
+	new string[144];
+	format(string, sizeof(string), "(( %s[%d]: %s ))", player_info[playerid][NAME], playerid, params[0]);
+	ProxDetector(20.0, playerid, string, 0xCCCC99FF, 0xCCCC99FF, 0xCCCC99FF, 0xCCCC99FF, 0xCCCC99FF);
+	return 1;
+}
+
+CMD:s(playerid, params[])
+{
+	if(sscanf(params, "s[105]", params[0])) return SCM(playerid, COLOR_GREY, "Используйте /s [текст]");
+	new string[144];
+	format(string, sizeof(string), "%s[%d] крикнул %s", player_info[playerid][NAME], playerid, params[0]);
+	ProxDetector(30.0, playerid, string, COLOR_WHITE, COLOR_WHITE, COLOR_WHITE, COLOR_WHITE, COLOR_WHITE);
+	if (GetPlayerState(playerid) == PLAYER_STATE_ONFOOT)
+	{
+		ApplyAnimation(playerid, "ON_LOOKERS", "shout_01", 4.1, 0, 0, 0, 0, 0);
+	}
+	SetPlayerChatBubble(playerid, params[0], COLOR_WHITE, 25, 7500);
+	return 1;
+}

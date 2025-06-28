@@ -11642,3 +11642,529 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [02:10:58] Number of vehicle models: 0
 [02:11:18] [connection] incoming connection: 127.0.0.1:63721 id: 0
 [02:11:18] [join] Pokimon has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[15:17:49] filterscripts = ""  (string)
+[15:17:49] 
+[15:17:49] Server Plugins
+[15:17:49] --------------
+[15:17:49]  Loading plugin: mysql
+[15:17:49]  >> plugin.mysql: R41-4 successfully loaded.
+[15:17:49]   Loaded.
+[15:17:49]  Loading plugin: crashdetect
+[15:17:49]   CrashDetect v4.18.1 is OK.
+[15:17:49]   Loaded.
+[15:17:49]  Loading plugin: streamer
+[15:17:49] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[15:17:49]   Loaded.
+[15:17:49]  Loading plugin: sscanf
+[15:17:50] 
+
+[15:17:50]  ===============================
+
+[15:17:50]       sscanf plugin loaded.     
+
+[15:17:50]          Version:  2.8.1        
+
+[15:17:50]    (c) 2012 Alex "Y_Less" Cole  
+
+[15:17:50]  ===============================
+
+[15:17:50]   Loaded.
+[15:17:50]  Loading plugin: pawncmd
+[15:17:50] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[15:17:50]   Loaded.
+[15:17:50]  Loading plugin: pawnregex
+[15:17:50] Pawn.Regex plugin v1.1 by urShadow loaded
+[15:17:50]   Loaded.
+[15:17:50]  Loaded 6 plugins.
+
+[15:17:50] 
+[15:17:50] Filterscripts
+[15:17:50] ---------------
+[15:17:50]   Loaded 0 filterscripts.
+
+[15:18:04] MySql НЕ РАБОТАЕТ!!!
+[15:18:04] 
+----------------------------------
+[15:18:04] --------NEW PROJECT STARTED---------
+[15:18:04] ----------------------------------
+
+[15:18:04] Number of vehicle models: 0
+[15:18:26] [connection] incoming connection: 127.0.0.1:56673 id: 0
+[15:18:26] [join] Pokimon has joined the server (0:127.0.0.1)
+[15:18:49] [part] Pokimon has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[15:19:08] filterscripts = ""  (string)
+[15:19:08] 
+[15:19:08] Server Plugins
+[15:19:08] --------------
+[15:19:08]  Loading plugin: mysql
+[15:19:08]  >> plugin.mysql: R41-4 successfully loaded.
+[15:19:08]   Loaded.
+[15:19:08]  Loading plugin: crashdetect
+[15:19:08]   CrashDetect v4.18.1 is OK.
+[15:19:08]   Loaded.
+[15:19:08]  Loading plugin: streamer
+[15:19:08] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[15:19:08]   Loaded.
+[15:19:08]  Loading plugin: sscanf
+[15:19:08] 
+
+[15:19:08]  ===============================
+
+[15:19:08]       sscanf plugin loaded.     
+
+[15:19:08]          Version:  2.8.1        
+
+[15:19:08]    (c) 2012 Alex "Y_Less" Cole  
+
+[15:19:08]  ===============================
+
+[15:19:08]   Loaded.
+[15:19:08]  Loading plugin: pawncmd
+[15:19:08] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[15:19:08]   Loaded.
+[15:19:08]  Loading plugin: pawnregex
+[15:19:08] Pawn.Regex plugin v1.1 by urShadow loaded
+[15:19:08]   Loaded.
+[15:19:08]  Loaded 6 plugins.
+
+[15:19:08] 
+[15:19:08] Filterscripts
+[15:19:08] ---------------
+[15:19:08]   Loaded 0 filterscripts.
+
+[15:19:16] Подключение к MySql установленно
+[15:19:16] 
+----------------------------------
+[15:19:16] --------NEW PROJECT STARTED---------
+[15:19:16] ----------------------------------
+
+[15:19:16] Number of vehicle models: 0
+[15:19:36] [connection] incoming connection: 127.0.0.1:59107 id: 0
+[15:19:37] [join] Pokimon has joined the server (0:127.0.0.1)
+[15:22:46] [part] Pokimon has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[00:54:40] filterscripts = ""  (string)
+[00:54:40] 
+[00:54:40] Server Plugins
+[00:54:40] --------------
+[00:54:40]  Loading plugin: mysql
+[00:54:40]  >> plugin.mysql: R41-4 successfully loaded.
+[00:54:40]   Loaded.
+[00:54:40]  Loading plugin: crashdetect
+[00:54:40]   CrashDetect v4.18.1 is OK.
+[00:54:40]   Loaded.
+[00:54:40]  Loading plugin: streamer
+[00:54:40] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[00:54:40]   Loaded.
+[00:54:40]  Loading plugin: sscanf
+[00:54:40] 
+
+[00:54:40]  ===============================
+
+[00:54:40]       sscanf plugin loaded.     
+
+[00:54:40]          Version:  2.8.1        
+
+[00:54:40]    (c) 2012 Alex "Y_Less" Cole  
+
+[00:54:40]  ===============================
+
+[00:54:40]   Loaded.
+[00:54:40]  Loading plugin: pawncmd
+[00:54:40] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[00:54:40]   Loaded.
+[00:54:40]  Loading plugin: pawnregex
+[00:54:40] Pawn.Regex plugin v1.1 by urShadow loaded
+[00:54:40]   Loaded.
+[00:54:40]  Loaded 6 plugins.
+
+[00:54:40] 
+[00:54:40] Filterscripts
+[00:54:40] ---------------
+[00:54:40]   Loaded 0 filterscripts.
+
+[00:54:48] Подключение к MySql установленно
+[00:54:48] 
+----------------------------------
+[00:54:48] --------NEW PROJECT STARTED---------
+[00:54:48] ----------------------------------
+
+[00:54:48] Number of vehicle models: 0
+[00:55:15] [connection] incoming connection: 127.0.0.1:50506 id: 0
+[00:55:15] [join] Pokimon has joined the server (0:127.0.0.1)
+[01:00:20] [part] Pokimon has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:00:24] filterscripts = ""  (string)
+[01:00:24] 
+[01:00:24] Server Plugins
+[01:00:24] --------------
+[01:00:24]  Loading plugin: mysql
+[01:00:25]  >> plugin.mysql: R41-4 successfully loaded.
+[01:00:25]   Loaded.
+[01:00:25]  Loading plugin: crashdetect
+[01:00:25]   CrashDetect v4.18.1 is OK.
+[01:00:25]   Loaded.
+[01:00:25]  Loading plugin: streamer
+[01:00:25] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[01:00:25]   Loaded.
+[01:00:25]  Loading plugin: sscanf
+[01:00:25] 
+
+[01:00:25]  ===============================
+
+[01:00:25]       sscanf plugin loaded.     
+
+[01:00:25]          Version:  2.8.1        
+
+[01:00:25]    (c) 2012 Alex "Y_Less" Cole  
+
+[01:00:25]  ===============================
+
+[01:00:25]   Loaded.
+[01:00:25]  Loading plugin: pawncmd
+[01:00:25] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[01:00:25]   Loaded.
+[01:00:25]  Loading plugin: pawnregex
+[01:00:25] Pawn.Regex plugin v1.1 by urShadow loaded
+[01:00:25]   Loaded.
+[01:00:25]  Loaded 6 plugins.
+
+[01:00:25] 
+[01:00:25] Filterscripts
+[01:00:25] ---------------
+[01:00:25]   Loaded 0 filterscripts.
+
+[01:00:33] Подключение к MySql установленно
+[01:00:33] 
+----------------------------------
+[01:00:33] --------NEW PROJECT STARTED---------
+[01:00:33] ----------------------------------
+
+[01:00:33] Number of vehicle models: 0
+[01:03:39] [connection] incoming connection: 127.0.0.1:54312 id: 0
+[01:03:39] [join] Pokimon has joined the server (0:127.0.0.1)
+[01:04:41] sscanf warning: Strings without a length are deprecated, please add a destination size.
+[01:04:41] [Pawn.Regex] Plugin::n_regex_new: regex_error(error_badbrace): The expression contained an invalid range in a { expression }.
+[01:04:41] [Pawn.Regex] Plugin::n_regex_check: invalid regex handle
+[01:04:41] [Pawn.Regex] Plugin::n_regex_delete: invalid regex handle
+[01:05:18] sscanf warning: Strings without a length are deprecated, please add a destination size.
+[01:05:18] [Pawn.Regex] Plugin::n_regex_new: regex_error(error_badbrace): The expression contained an invalid range in a { expression }.
+[01:05:18] [Pawn.Regex] Plugin::n_regex_check: invalid regex handle
+[01:05:18] [Pawn.Regex] Plugin::n_regex_delete: invalid regex handle
+[01:07:49] [part] Pokimon has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:07:55] filterscripts = ""  (string)
+[01:07:55] 
+[01:07:55] Server Plugins
+[01:07:55] --------------
+[01:07:55]  Loading plugin: mysql
+[01:07:55]  >> plugin.mysql: R41-4 successfully loaded.
+[01:07:55]   Loaded.
+[01:07:55]  Loading plugin: crashdetect
+[01:07:55]   CrashDetect v4.18.1 is OK.
+[01:07:55]   Loaded.
+[01:07:55]  Loading plugin: streamer
+[01:07:55] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[01:07:55]   Loaded.
+[01:07:55]  Loading plugin: sscanf
+[01:07:55] 
+
+[01:07:55]  ===============================
+
+[01:07:55]       sscanf plugin loaded.     
+
+[01:07:55]          Version:  2.8.1        
+
+[01:07:55]    (c) 2012 Alex "Y_Less" Cole  
+
+[01:07:55]  ===============================
+
+[01:07:55]   Loaded.
+[01:07:55]  Loading plugin: pawncmd
+[01:07:55] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[01:07:55]   Loaded.
+[01:07:55]  Loading plugin: pawnregex
+[01:07:55] Pawn.Regex plugin v1.1 by urShadow loaded
+[01:07:55]   Loaded.
+[01:07:55]  Loaded 6 plugins.
+
+[01:07:55] 
+[01:07:55] Filterscripts
+[01:07:55] ---------------
+[01:07:55]   Loaded 0 filterscripts.
+
+[01:08:03] Подключение к MySql установленно
+[01:08:03] 
+----------------------------------
+[01:08:03] --------NEW PROJECT STARTED---------
+[01:08:03] ----------------------------------
+
+[01:08:03] Number of vehicle models: 0
+[01:09:13] [connection] incoming connection: 127.0.0.1:49393 id: 0
+[01:09:13] [join] Pokimon has joined the server (0:127.0.0.1)
+[01:09:39] [Pawn.Regex] Plugin::n_regex_new: regex_error(error_badbrace): The expression contained an invalid range in a { expression }.
+[01:09:39] [Pawn.Regex] Plugin::n_regex_check: invalid regex handle
+[01:09:39] [Pawn.Regex] Plugin::n_regex_delete: invalid regex handle
+[01:10:49] [Pawn.Regex] Plugin::n_regex_new: regex_error(error_badbrace): The expression contained an invalid range in a { expression }.
+[01:10:49] [Pawn.Regex] Plugin::n_regex_check: invalid regex handle
+[01:10:49] [Pawn.Regex] Plugin::n_regex_delete: invalid regex handle
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:12:15] filterscripts = ""  (string)
+[01:12:15] 
+[01:12:15] Server Plugins
+[01:12:15] --------------
+[01:12:15]  Loading plugin: mysql
+[01:12:15]  >> plugin.mysql: R41-4 successfully loaded.
+[01:12:15]   Loaded.
+[01:12:15]  Loading plugin: crashdetect
+[01:12:15]   CrashDetect v4.18.1 is OK.
+[01:12:15]   Loaded.
+[01:12:15]  Loading plugin: streamer
+[01:12:15] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[01:12:15]   Loaded.
+[01:12:15]  Loading plugin: sscanf
+[01:12:15] 
+
+[01:12:15]  ===============================
+
+[01:12:15]       sscanf plugin loaded.     
+
+[01:12:15]          Version:  2.8.1        
+
+[01:12:15]    (c) 2012 Alex "Y_Less" Cole  
+
+[01:12:15]  ===============================
+
+[01:12:15]   Loaded.
+[01:12:15]  Loading plugin: pawncmd
+[01:12:15] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[01:12:15]   Loaded.
+[01:12:15]  Loading plugin: pawnregex
+[01:12:15] Pawn.Regex plugin v1.1 by urShadow loaded
+[01:12:15]   Loaded.
+[01:12:15]  Loaded 6 plugins.
+
+[01:12:15] 
+[01:12:15] Filterscripts
+[01:12:15] ---------------
+[01:12:15]   Loaded 0 filterscripts.
+
+[01:12:23] Подключение к MySql установленно
+[01:12:23] 
+----------------------------------
+[01:12:23] --------NEW PROJECT STARTED---------
+[01:12:23] ----------------------------------
+
+[01:12:23] Number of vehicle models: 0
+[01:15:26] [connection] incoming connection: 127.0.0.1:60741 id: 0
+[01:15:26] [join] Pokimon has joined the server (0:127.0.0.1)
+[01:15:46] [Pawn.Regex] Plugin::n_regex_new: regex_error(error_badbrace): The expression contained an invalid range in a { expression }.
+[01:15:46] [Pawn.Regex] Plugin::n_regex_check: invalid regex handle
+[01:15:46] [Pawn.Regex] Plugin::n_regex_delete: invalid regex handle
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:25:01] filterscripts = ""  (string)
+[01:25:01] 
+[01:25:01] Server Plugins
+[01:25:01] --------------
+[01:25:01]  Loading plugin: mysql
+[01:25:01]  >> plugin.mysql: R41-4 successfully loaded.
+[01:25:01]   Loaded.
+[01:25:01]  Loading plugin: crashdetect
+[01:25:01]   CrashDetect v4.18.1 is OK.
+[01:25:01]   Loaded.
+[01:25:01]  Loading plugin: streamer
+[01:25:01] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[01:25:01]   Loaded.
+[01:25:01]  Loading plugin: sscanf
+[01:25:01] 
+
+[01:25:01]  ===============================
+
+[01:25:01]       sscanf plugin loaded.     
+
+[01:25:01]          Version:  2.8.1        
+
+[01:25:01]    (c) 2012 Alex "Y_Less" Cole  
+
+[01:25:01]  ===============================
+
+[01:25:01]   Loaded.
+[01:25:01]  Loading plugin: pawncmd
+[01:25:01] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[01:25:01]   Loaded.
+[01:25:01]  Loading plugin: pawnregex
+[01:25:01] Pawn.Regex plugin v1.1 by urShadow loaded
+[01:25:01]   Loaded.
+[01:25:01]  Loaded 6 plugins.
+
+[01:25:01] 
+[01:25:01] Filterscripts
+[01:25:01] ---------------
+[01:25:01]   Loaded 0 filterscripts.
+
+[01:25:09] Подключение к MySql установленно
+[01:25:09] 
+----------------------------------
+[01:25:09] --------NEW PROJECT STARTED---------
+[01:25:09] ----------------------------------
+
+[01:25:09] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:25:13] filterscripts = ""  (string)
+[01:25:13] 
+[01:25:13] Server Plugins
+[01:25:13] --------------
+[01:25:13]  Loading plugin: mysql
+[01:25:13]  >> plugin.mysql: R41-4 successfully loaded.
+[01:25:13]   Loaded.
+[01:25:13]  Loading plugin: crashdetect
+[01:25:13]   CrashDetect v4.18.1 is OK.
+[01:25:13]   Loaded.
+[01:25:13]  Loading plugin: streamer
+[01:25:13] 
+
+*** Streamer Plugin v2.8.2 by Incognito loaded ***
+
+[01:25:13]   Loaded.
+[01:25:13]  Loading plugin: sscanf
+[01:25:13] 
+
+[01:25:13]  ===============================
+
+[01:25:13]       sscanf plugin loaded.     
+
+[01:25:13]          Version:  2.8.1        
+
+[01:25:13]    (c) 2012 Alex "Y_Less" Cole  
+
+[01:25:13]  ===============================
+
+[01:25:13]   Loaded.
+[01:25:13]  Loading plugin: pawncmd
+[01:25:13] Pawn.CMD plugin v3.1.4 by urShadow loaded
+[01:25:13]   Loaded.
+[01:25:13]  Loading plugin: pawnregex
+[01:25:13] Pawn.Regex plugin v1.1 by urShadow loaded
+[01:25:13]   Loaded.
+[01:25:13]  Loaded 6 plugins.
+
+[01:25:13] 
+[01:25:13] Filterscripts
+[01:25:13] ---------------
+[01:25:13]   Loaded 0 filterscripts.
+
+[01:26:11] [connection] incoming connection: 127.0.0.1:53914 id: 0
+[01:26:11] [join] Pokimon has joined the server (0:127.0.0.1)
+[01:26:54] [debug] Server received interrupt signal
+[01:26:54] [debug] Native backtrace:
+[01:26:54] [debug] #0 77bb99ec in ?? () from C:\WINDOWS\SYSTEM32\ntdll.dll
+[01:26:54] [debug] #1 7734df70 in ?? () from C:\WINDOWS\System32\KERNELBASE.dll
+[01:26:54] [debug] #2 7734df0f in ?? () from C:\WINDOWS\System32\KERNELBASE.dll
+[01:26:54] [debug] #3 0048d53c in ?? () from samp-server.exe
+[01:26:54] [debug] #4 0049b531 in ?? () from samp-server.exe
+[01:26:54] [debug] #5 0049b541 in ?? () from samp-server.exe
+[01:26:54] --- Server Shutting Down.
+[01:26:54] [part] Pokimon has left the server (0:0)
+[01:26:54] plugin.mysql: Unloading plugin...
+[01:26:54] plugin.mysql: Plugin unloaded.
+[01:26:54] 
+
+*** Streamer Plugin v2.8.2 by Incognito unloaded ***
+
+[01:26:54] 
+
+[01:26:54]  ===============================
+
+[01:26:54]      sscanf plugin unloaded.    
+
+[01:26:54]  ===============================
+
+[01:26:54] Pawn.CMD plugin v3.1.4 by urShadow unloaded
+[01:26:54] Pawn.Regex plugin v1.1 by urShadow unloaded
